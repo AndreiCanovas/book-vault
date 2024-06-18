@@ -1,0 +1,686 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Princípios de Economia Política</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+    margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-uiBlue { background-color: rgba(35, 131, 226, .07); }
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-transparentGray { background-color: rgba(227, 226, 224, 0); }
+.select-value-color-translucentGray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+.select-value-color-pageGlass { background-color: undefined; }
+.select-value-color-washGlass { background-color: undefined; }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="161f2889-c1bb-44f5-919c-ec67e7edbaca" class="page sans"><header><h1 class="page-title">Princípios de Economia Política</h1><p class="page-description"></p><table class="properties"><tbody><tr class="property-row property-row-date"><th><span class="icon property-icon"><svg role="graphics-symbol" viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0" class="typesDate"><path d="M3.29688 14.4561H12.7031C14.1797 14.4561 14.9453 13.6904 14.9453 12.2344V3.91504C14.9453 2.45215 14.1797 1.69336 12.7031 1.69336H3.29688C1.82031 1.69336 1.05469 2.45215 1.05469 3.91504V12.2344C1.05469 13.6973 1.82031 14.4561 3.29688 14.4561ZM3.27637 13.1162C2.70898 13.1162 2.39453 12.8154 2.39453 12.2207V5.9043C2.39453 5.30273 2.70898 5.00879 3.27637 5.00879H12.71C13.2842 5.00879 13.6055 5.30273 13.6055 5.9043V12.2207C13.6055 12.8154 13.2842 13.1162 12.71 13.1162H3.27637ZM6.68066 7.38086H7.08398C7.33008 7.38086 7.41211 7.30566 7.41211 7.05957V6.66309C7.41211 6.41699 7.33008 6.3418 7.08398 6.3418H6.68066C6.44141 6.3418 6.35938 6.41699 6.35938 6.66309V7.05957C6.35938 7.30566 6.44141 7.38086 6.68066 7.38086ZM8.92285 7.38086H9.31934C9.56543 7.38086 9.64746 7.30566 9.64746 7.05957V6.66309C9.64746 6.41699 9.56543 6.3418 9.31934 6.3418H8.92285C8.67676 6.3418 8.59473 6.41699 8.59473 6.66309V7.05957C8.59473 7.30566 8.67676 7.38086 8.92285 7.38086ZM11.1582 7.38086H11.5547C11.8008 7.38086 11.8828 7.30566 11.8828 7.05957V6.66309C11.8828 6.41699 11.8008 6.3418 11.5547 6.3418H11.1582C10.9121 6.3418 10.8301 6.41699 10.8301 6.66309V7.05957C10.8301 7.30566 10.9121 7.38086 11.1582 7.38086ZM4.44531 9.58203H4.84863C5.09473 9.58203 5.17676 9.50684 5.17676 9.26074V8.86426C5.17676 8.61816 5.09473 8.54297 4.84863 8.54297H4.44531C4.20605 8.54297 4.12402 8.61816 4.12402 8.86426V9.26074C4.12402 9.50684 4.20605 9.58203 4.44531 9.58203ZM6.68066 9.58203H7.08398C7.33008 9.58203 7.41211 9.50684 7.41211 9.26074V8.86426C7.41211 8.61816 7.33008 8.54297 7.08398 8.54297H6.68066C6.44141 8.54297 6.35938 8.61816 6.35938 8.86426V9.26074C6.35938 9.50684 6.44141 9.58203 6.68066 9.58203ZM8.92285 9.58203H9.31934C9.56543 9.58203 9.64746 9.50684 9.64746 9.26074V8.86426C9.64746 8.61816 9.56543 8.54297 9.31934 8.54297H8.92285C8.67676 8.54297 8.59473 8.61816 8.59473 8.86426V9.26074C8.59473 9.50684 8.67676 9.58203 8.92285 9.58203ZM11.1582 9.58203H11.5547C11.8008 9.58203 11.8828 9.50684 11.8828 9.26074V8.86426C11.8828 8.61816 11.8008 8.54297 11.5547 8.54297H11.1582C10.9121 8.54297 10.8301 8.61816 10.8301 8.86426V9.26074C10.8301 9.50684 10.9121 9.58203 11.1582 9.58203ZM4.44531 11.7832H4.84863C5.09473 11.7832 5.17676 11.708 5.17676 11.4619V11.0654C5.17676 10.8193 5.09473 10.7441 4.84863 10.7441H4.44531C4.20605 10.7441 4.12402 10.8193 4.12402 11.0654V11.4619C4.12402 11.708 4.20605 11.7832 4.44531 11.7832ZM6.68066 11.7832H7.08398C7.33008 11.7832 7.41211 11.708 7.41211 11.4619V11.0654C7.41211 10.8193 7.33008 10.7441 7.08398 10.7441H6.68066C6.44141 10.7441 6.35938 10.8193 6.35938 11.0654V11.4619C6.35938 11.708 6.44141 11.7832 6.68066 11.7832ZM8.92285 11.7832H9.31934C9.56543 11.7832 9.64746 11.708 9.64746 11.4619V11.0654C9.64746 10.8193 9.56543 10.7441 9.31934 10.7441H8.92285C8.67676 10.7441 8.59473 10.8193 8.59473 11.0654V11.4619C8.59473 11.708 8.67676 11.7832 8.92285 11.7832Z"></path></svg></span>Started At</th><td><time>@26/01/2023 → 17/04/2023</time></td></tr><tr class="property-row property-row-select"><th><span class="icon property-icon"><img src="https://www.notion.so/icons/bookmark_gray.svg" style="width:14px;height:14px"/></span>Status</th><td><span class="selected-value select-value-color-default">Finished</span></td></tr><tr class="property-row property-row-multi_select"><th><span class="icon property-icon"><svg role="graphics-symbol" viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0" class="typesMultipleSelect"><path d="M1.91602 4.83789C2.44238 4.83789 2.87305 4.40723 2.87305 3.87402C2.87305 3.34766 2.44238 2.91699 1.91602 2.91699C1.38281 2.91699 0.952148 3.34766 0.952148 3.87402C0.952148 4.40723 1.38281 4.83789 1.91602 4.83789ZM5.1084 4.52344H14.3984C14.7607 4.52344 15.0479 4.23633 15.0479 3.87402C15.0479 3.51172 14.7607 3.22461 14.3984 3.22461H5.1084C4.74609 3.22461 4.45898 3.51172 4.45898 3.87402C4.45898 4.23633 4.74609 4.52344 5.1084 4.52344ZM1.91602 9.03516C2.44238 9.03516 2.87305 8.60449 2.87305 8.07129C2.87305 7.54492 2.44238 7.11426 1.91602 7.11426C1.38281 7.11426 0.952148 7.54492 0.952148 8.07129C0.952148 8.60449 1.38281 9.03516 1.91602 9.03516ZM5.1084 8.7207H14.3984C14.7607 8.7207 15.0479 8.43359 15.0479 8.07129C15.0479 7.70898 14.7607 7.42188 14.3984 7.42188H5.1084C4.74609 7.42188 4.45898 7.70898 4.45898 8.07129C4.45898 8.43359 4.74609 8.7207 5.1084 8.7207ZM1.91602 13.2324C2.44238 13.2324 2.87305 12.8018 2.87305 12.2686C2.87305 11.7422 2.44238 11.3115 1.91602 11.3115C1.38281 11.3115 0.952148 11.7422 0.952148 12.2686C0.952148 12.8018 1.38281 13.2324 1.91602 13.2324ZM5.1084 12.918H14.3984C14.7607 12.918 15.0479 12.6309 15.0479 12.2686C15.0479 11.9062 14.7607 11.6191 14.3984 11.6191H5.1084C4.74609 11.6191 4.45898 11.9062 4.45898 12.2686C4.45898 12.6309 4.74609 12.918 5.1084 12.918Z"></path></svg></span>Tags</th><td><span class="selected-value select-value-color-gray">Economia</span></td></tr><tr class="property-row property-row-select"><th><span class="icon property-icon"><img src="https://www.notion.so/icons/kind_gray.svg" style="width:14px;height:14px"/></span>Type</th><td><span class="selected-value select-value-color-blue">Expositivo</span></td></tr><tr class="property-row property-row-select"><th><span class="icon property-icon"><img src="https://www.notion.so/icons/hashtag_gray.svg" style="width:14px;height:14px"/></span>Year</th><td><span class="selected-value">2023</span></td></tr><tr class="property-row property-row-multi_select"><th><span class="icon property-icon"><img src="https://www.notion.so/icons/user_gray.svg" style="width:14px;height:14px"/></span>Author</th><td><span class="selected-value select-value-color-default">Carl Menger</span></td></tr><tr class="property-row property-row-number"><th><span class="icon property-icon"><svg role="graphics-symbol" viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0" class="typesNumber"><path d="M2.4834 10.9902H4.33594L3.75488 13.8887C3.74121 13.9639 3.72754 14.0664 3.72754 14.1416C3.72754 14.5381 3.99414 14.7637 4.39746 14.7637C4.81445 14.7637 5.09473 14.5449 5.18359 14.1143L5.80566 10.9902H8.79297L8.21191 13.8887C8.19824 13.9639 8.18457 14.0664 8.18457 14.1416C8.18457 14.5381 8.45117 14.7637 8.85449 14.7637C9.27148 14.7637 9.55176 14.5449 9.63379 14.1143L10.2627 10.9902H12.4502C12.9287 10.9902 13.2432 10.6758 13.2432 10.2109C13.2432 9.8418 12.9902 9.56836 12.6006 9.56836H10.5498L11.2129 6.28711H13.3662C13.8379 6.28711 14.1523 5.96582 14.1523 5.50098C14.1523 5.13184 13.9062 4.8584 13.5098 4.8584H11.5L12.0195 2.27441C12.0264 2.21973 12.0469 2.11035 12.0469 2.01465C12.0469 1.625 11.7666 1.39258 11.3633 1.39258C10.9053 1.39258 10.6797 1.63867 10.5977 2.05566L10.0303 4.8584H7.04297L7.5625 2.27441C7.57617 2.21973 7.58984 2.11035 7.58984 2.01465C7.58984 1.625 7.30957 1.39258 6.91309 1.39258C6.44824 1.39258 6.21582 1.63867 6.13379 2.05566L5.57324 4.8584H3.54297C3.06445 4.8584 2.75 5.18652 2.75 5.65137C2.75 6.03418 3.00293 6.28711 3.39258 6.28711H5.28613L4.62305 9.56836H2.63379C2.15527 9.56836 1.84082 9.89648 1.84082 10.3613C1.84082 10.7373 2.09375 10.9902 2.4834 10.9902ZM6.09277 9.56836L6.75586 6.28711H9.74316L9.08008 9.56836H6.09277Z"></path></svg></span>Pages</th><td>348</td></tr><tr class="property-row property-row-number"><th><span class="icon property-icon"><img src="https://www.notion.so/icons/calendar-day_gray.svg" style="width:14px;height:14px"/></span>From</th><td>1871</td></tr><tr class="property-row property-row-formula"><th><span class="icon property-icon"><img src="https://www.notion.so/icons/eject_gray.svg" style="width:14px;height:14px"/></span>Rank</th><td>3</td></tr></tbody></table></header><div class="page-body"><details open=""><summary style="font-weight:600;font-size:1.875em;line-height:1.3;margin:0">Notes</summary><div class="indented"><hr id="1bc48d8e-9845-4258-b6bd-f99db9aed9f9"/><p id="1d1a5601-7f61-481a-b834-c49a2137e0aa" class="">
+</p><ul id="8f5725d8-e887-4205-bee7-fc618b261d4f" class="toggle"><li><details open=""><summary><strong>Doutrina Geral Sobre os Bens</strong></summary><hr id="ef532957-518b-497c-a349-da564dfa6ff8"/><p id="c4697ea4-cb75-4542-a3c1-d2ee39c1c696" class=""><strong>Ben</strong>:</p><ul id="07e67ab6-caf5-477e-b7b2-c83b734b3600" class="bulleted-list"><li style="list-style-type:disc">Estado de necessidade para o estado de satisfação desta.</li></ul><ul id="0b42e956-435e-4ec6-b7c1-5d58b97bbc1f" class="bulleted-list"><li style="list-style-type:disc">O empenho das pessoas está em atender plenamente suas necessidades, e, onde isso não for possível, de as atender da maneira mais completa possível.</li></ul><ul id="71e7fa18-3c62-4efe-bd51-bad9a88b08a7" class="bulleted-list"><li style="list-style-type:disc">Uma coisa útil em “posse” (Bem) ao ser utilizado causa um efeito de satisfação de uma necessidade.</li></ul><ul id="c8be3ba4-73e6-48f8-81f8-ace352226afb" class="bulleted-list"><li style="list-style-type:disc">Sendo Bens de N ordem:</li></ul><figure id="ecd8a8d2-3947-40a7-bdc8-9dc9e2ee36fc" class="image" style="text-align:center"><a href="Princi%CC%81pios%20de%20Economia%20Poli%CC%81tica%20161f2889c1bb44f5919cec67e7edbaca/Untitled.png"><img style="width:624px" src="Princi%CC%81pios%20de%20Economia%20Poli%CC%81tica%20161f2889c1bb44f5919cec67e7edbaca/Untitled.png"/></a></figure><p id="6df75e4a-f92f-4cb8-acd0-697a65b3de9a" class=""><strong>Consideração do tempo na cadeia de transformações</strong> dos bens.</p><p id="4b4501c4-e004-4272-ae10-b332140430f4" class="">Quanto maior a ordem maior a incerteza sobre a qualidade e quantidade do produto de primeira ordem (Incerteza Econômica).</p><p id="a0a1ca99-0e98-4dfd-b2e1-f40a71095f15" class=""><strong>Patrimônio: </strong>Conjunto de bens que dispõe um indivíduo para o atendimento de suas necessidades.</p><p id="b71dda3b-44e4-4b90-bf75-e675d6a5cc7c" class="">
+</p></details></li></ul><ul id="28ee7e6e-4ab3-4172-98f2-be5bd20b96ff" class="toggle"><li><details open=""><summary><strong>A Economia e os Bens econômicos</strong></summary><hr id="1e3f7b33-5cf5-4b62-9aa4-bbb48607308c"/><ul id="d5ec42c7-1f17-44fa-a1fc-2ab4c8e16138" class="bulleted-list"><li style="list-style-type:disc"><strong>Demanda: </strong>Quantidade de bens para atender às suas necessidades.<ul id="0a52fa4b-b4b0-4657-99d8-100d88eef39f" class="bulleted-list"><li style="list-style-type:circle">Total, efetiva e latente.</li></ul></li></ul><ul id="eb1464e9-3e06-4385-959c-878d43c615ce" class="bulleted-list"><li style="list-style-type:disc"><strong>Previdência: </strong>Atendimento das necessidades em tempos futuros.<ul id="9d347ad6-6ea9-4eb7-95b1-c7407fb730e6" class="bulleted-list"><li style="list-style-type:circle">Quantidade de bens para atender necessidades na extensão da previdência.</li></ul><ul id="52834321-3c5a-43e2-a3ce-5691455a7239" class="bulleted-list"><li style="list-style-type:circle">Quantidade de bens que dispomos para alcançar o objetivo acima.</li></ul><ul id="bf7a1c09-c2fe-417d-9624-e76c2872a914" class="bulleted-list"><li style="list-style-type:circle">Necessidade de previsão de bens futuros</li></ul></li></ul><ul id="7d8803ab-292c-4ecc-ae80-2efe63317a38" class="bulleted-list"><li style="list-style-type:disc"><strong>Bens econômicos:</strong> Cuja quantidade (oferta) é menor que a demanda, em um determinado período de tempo.</li></ul><figure class="block-color-blue_background callout" style="white-space:pre-wrap;display:flex" id="c9c1e886-8d55-4ed9-8e86-61da18accaf5"><div style="font-size:1.5em"><span class="icon">📌</span></div><div style="width:100%">A qualidade econômica de um bem não é inerente a esse bem, mas sim a partir da relação de equilíbrio entre oferta e demanda.</div></figure><ul id="c3a9ae0d-25bd-4d48-8da6-c35ad2dc776c" class="bulleted-list"><li style="list-style-type:disc"><strong>Propriedade: </strong>Necessidade prática para proteção dos bens econômicos.</li></ul><ul id="3f9cee89-df06-43d0-8492-3e04b3301b91" class="bulleted-list"><li style="list-style-type:disc"><strong>Bens não econômicos</strong>: oferta maior que a demanda (não existe motivação de estoque).</li></ul><ul id="f433a78c-42a4-423f-ac3a-071d7331a5a6" class="bulleted-list"><li style="list-style-type:disc"><strong>Riqueza: </strong>Quantidade de bens econômicos disponíveis a um indivíduo.</li></ul><p id="6124844e-42fc-4042-bc62-db4654fd0965" class="">
+</p></details></li></ul><ul id="9fc71ad2-0765-460a-9d03-86f8c7dc5562" class="toggle"><li><details open=""><summary><strong>Doutrina Sobre o Valor</strong></summary><hr id="b612409b-b12b-43b4-b0a7-307663664fea"/><ul id="5e684f34-35ef-4280-b16d-65df85fd8be8" class="bulleted-list"><li style="list-style-type:disc"><strong>Valor:</strong> Importância/Juízo que o indivíduo dá a um determinado bem econômico, ou quantidade concreta do mesmo. Essa importância atribuída ao bem é um reflexo da importância que o atendimento dessa necessidade tem para o indivíduo.</li></ul><ul id="58fe8db5-ced5-439d-afac-aa8cf4451a1b" class="bulleted-list"><li style="list-style-type:disc"><strong>Variações</strong>: Devido a elementos subjetivos (a) e objetivos (b).<ol type="1" id="350294e5-f9b2-4fa8-87d3-3294f3dda569" class="numbered-list" start="1"><li>Variação no grau de importância da necessidade a ser atendida. <p id="c82198fa-c37e-4d2e-b5f9-8cdd1f2fd89e" class="">(manutenção da vida, manutenção da saúde, maior &gt; menor bem-estar; indiferença; desconforto)</p></li></ol><ol type="1" id="9e81f8dd-fe57-4ecf-a049-bd134d5c1811" class="numbered-list" start="2"><li>Dependência do atendimento das diversas necessidades em relação aos bens concretos.</li></ol><ol type="1" id="8ad96ee9-3dc7-48bb-9a88-5511c123ad87" class="numbered-list" start="3"><li><mark class="highlight-orange_background">Resumo em pág. 157 a 159</mark>.</li></ol></li></ul><ul id="82eb7f15-9791-49a1-9681-8fa64893e1fe" class="bulleted-list"><li style="list-style-type:disc"><strong>Qualidade dos bens: </strong>Influência da qualidade dos bens no valor (Para dois bens de diferente qualidade podemos ter a diferença de atendimento quantitativo e/ou qualitativo das necessidades).</li></ul><ul id="0da7f78f-5f83-44f9-a204-ab4f1767d314" class="bulleted-list"><li style="list-style-type:disc"><strong>Erro na estipulação do valor: </strong>Feito pelo próprio indivíduo na economia.</li></ul><ul id="5941af62-dd0e-4b27-b89f-d8d38759b391" class="bulleted-list"><li style="list-style-type:disc"><strong>Valor (Bens de ordem superior): </strong>Determinado pelo valor previsível dos bens de ordem inferior, para cuja produção servirão.</li></ul><ul id="e3291efe-a330-46e6-8cab-66a4458d3fd1" class="bulleted-list"><li style="list-style-type:disc"><strong>Capital (bens-capital): </strong>Excedente de bens econômicos. (<mark class="highlight-orange_background">resumo em 188-189</mark>).</li></ul><ul id="f8b6f3e3-728e-46de-b877-6ea73261c4d3" class="bulleted-list"><li style="list-style-type:disc"><strong>Valor individual de um bem de ordem superior: </strong>importância das necessidades atendidas com o bem - importância das necessidades atendidas sem o bem.</li></ul><p id="c8fd0247-5720-4814-90d0-3c50d47c5704" class="">
+</p></details></li></ul><ul id="05926951-c156-49b8-a303-741db1f3a180" class="toggle"><li><details open=""><summary><strong>Doutrina Sobre a Troca</strong></summary><hr id="acf19f27-5993-4367-8e25-86152fcb9c31"/><ul id="996b45f4-9674-4404-abac-4704e2d79bd9" class="bulleted-list"><li style="list-style-type:disc"><strong>Quando: </strong>O ato da troca satisfaz alguma necessidade dos dois lados ao se trocar um bem excedente ou não econômico para o atual proprietário. (<mark class="highlight-orange_background">definição pg. 207</mark>).</li></ul><ul id="63b76648-9454-4304-9c67-a2ba61fd2e80" class="bulleted-list"><li style="list-style-type:disc"><strong>Limite: </strong>Uma das duas partes não possui nenhuma quantidade de bens que, para ela, tenha valor menor que o de uma quantidade de outro bem possuído pelo segundo indivíduo, enquanto, em relação a este segundo, a relação de valor e a inversa.</li></ul><p id="6c7ac0da-dc4f-440d-b81e-ad7fc4103afe" class="">
+</p></details></li></ul><ul id="0d7558db-bc98-4ef0-9e8c-e711b2950dfc" class="toggle"><li><details open=""><summary><strong>Doutrina Sobre o Preço</strong></summary><hr id="32554d5a-59c8-443b-a737-0dfcb835b356"/><ul id="41add8cc-456b-4b0b-9df5-e44bc9f17e48" class="bulleted-list"><li style="list-style-type:disc"><strong>Preço:</strong><ul id="83527a64-e0de-43fc-84f8-e1d63a212862" class="bulleted-list"><li style="list-style-type:circle">Quantidades de bens que aparecem na permuta</li></ul><ul id="af5c95a3-4696-4ad0-be21-b4eb0f372ce6" class="bulleted-list"><li style="list-style-type:circle">Não determinada a igualdade dos bens permutados</li></ul><ul id="edd543e8-c5fc-443b-88de-f7c9717add49" class="bulleted-list"><li style="list-style-type:circle">Pechinchar (leva ao equilíbrio de preços) (pág. 225)</li></ul></li></ul><ul id="94f8ab35-e04d-4132-85ef-ab1477b2560f" class="bulleted-list"><li style="list-style-type:disc"><strong>Preço em Monopólio (concorrência unilateral)</strong><ul id="870a0693-f219-4349-bd43-fbb72bc9869e" class="bulleted-list"><li style="list-style-type:circle">A &gt; (B, B2, … Bn)</li></ul><ul id="e50b49f6-99f5-47d0-9a3e-1e48ec069a33" class="bulleted-list"><li style="list-style-type:circle">O Monopolista é livre para determinar os preços ou a quantidade a ser vendida.</li></ul></li></ul><ul id="ff342632-5537-4259-a21d-4cd08faafad9" class="bulleted-list"><li style="list-style-type:disc"><strong>Concorrência bilateral</strong><ul id="8407b7dc-12e2-445d-9bd8-3b54aea9b141" class="bulleted-list"><li style="list-style-type:circle">(A1, A2, … An) &gt; (B1, B2, … Bn)</li></ul></li></ul><p id="53089943-ed98-4515-94f0-489b5f9e2105" class="">
+</p></details></li></ul><ul id="ea1473a9-848c-49c6-ad90-4f28d8e3314b" class="toggle"><li><details open=""><summary><strong>Valor de Uso e Valor de Troca</strong></summary><hr id="f4bb1cfb-aef6-4bc3-99f1-d31d991aa428"/><ul id="ff2f2324-ef0a-4626-9fda-37d0261c8ef3" class="bulleted-list"><li style="list-style-type:disc"><strong>Uso</strong>: valor do atendimento direto de uma necessidade</li></ul><ul id="d1ae7713-d24a-4cbc-82e6-2b175dc0a87e" class="bulleted-list"><li style="list-style-type:disc"><strong>Troca</strong>: valor do atendimento indireto de uma necessidade </li></ul><p id="0bde0751-479e-41bc-8ff0-63daad7aa605" class="">Bem geralmente possui os dois em graus diferentes (o maior é o determinante “valor econômico&quot; para o indivíduo)</p><p id="6dbeda6a-e469-419f-bc43-180ac8b1d45e" class="">
+</p></details></li></ul><ul id="c58ea201-a9d2-4b60-b7b3-829a75c8b8fd" class="toggle"><li><details open=""><summary><strong>Doutrina Sobre a Mercadoria</strong></summary><hr id="6c9dfb5a-e4b5-4e7b-bf12-8e2ab7704dfe"/><ul id="3fefa1b5-50bd-4ffa-bdcc-9816f04f69c8" class="bulleted-list"><li style="list-style-type:disc"><strong>Mercadoria</strong>: Bens reais móveis que não sejam dinheiro / Bens econômicos quaisquer destinados a troca.</li></ul><ul id="59977091-1dcc-4864-9004-181317dcdfa6" class="bulleted-list"><li style="list-style-type:disc"><strong>Vendabilidade:</strong><p id="ac13918f-7c89-4bd7-8978-895aaa6bf14d" class=""><strong><em><span style="border-bottom:0.05em solid">Limites (publico, espaço, tempo e quantidade)</span></em></strong></p><ul id="77b7a237-079a-4dd8-983c-9e40363fb41c" class="bulleted-list"><li style="list-style-type:circle">As pessoas as quais as mercadorias podem ser vendidas.</li></ul><ul id="11c6028f-82e7-43e2-9051-37418908b105" class="bulleted-list"><li style="list-style-type:circle">Território dentro do qual podem ser vendidas.</li></ul><ul id="3cc11829-ebfe-42f2-a1f8-a33ab1843d15" class="bulleted-list"><li style="list-style-type:circle">Quantidade.</li></ul><ul id="545e85ad-d9db-4778-adcb-67f81e6e3111" class="bulleted-list"><li style="list-style-type:circle">Períodos dentro dos quais as mercadorias encontram mercado (Sazonalidade, validade).</li></ul><p id="cac4c76e-df3b-4ab5-a04d-079dce75703f" class=""><em><strong><span style="border-bottom:0.05em solid">Grau</span></strong></em></p><ul id="cba8ba34-8701-42cf-8175-9d73de43af86" class="bulleted-list"><li style="list-style-type:circle">Preços (Definição dos preços econômicos).</li></ul><ul id="6b58a5d6-ce88-41c4-a14f-abaac9763047" class="bulleted-list"><li style="list-style-type:circle">Especulações (Aquisição de mercadorias para além das demandas).</li></ul><p id="928438dc-07a8-4625-9b84-6d6613ae9950" class=""><em><strong><span style="border-bottom:0.05em solid">Capacidade de circulação</span></strong></em></p><ul id="d7ec9e56-6146-40dd-8fa0-e24be1c26e99" class="bulleted-list"><li style="list-style-type:circle">Menor sempre que levanta a suspeita de uso ou degradação pelo proprietário anterior. (Suspeita de que o valor seja menor que o original).</li></ul><ul id="5191fd81-582c-4f0c-b897-bf08e87f542a" class="bulleted-list"><li style="list-style-type:circle">Que necessitem conhecimento técnico do vendedor / patentes / etc..</li></ul><ul id="dcb62024-9a5d-4aae-b14b-1fd8c3ff3df0" class="bulleted-list"><li style="list-style-type:circle">Produtos que necessitam adaptação (Roupas sob medida, etc.)</li></ul><ul id="10f79019-f046-45f2-8928-87ad89d1c4bf" class="bulleted-list"><li style="list-style-type:circle">Produtos com grandes oscilações de preço.</li></ul><ul id="78a33439-dbfe-443c-8451-94c82d8a52e5" class="bulleted-list"><li style="list-style-type:circle">Outros impactos inerentes dos limites e graus descritos acima.</li></ul></li></ul><p id="e343a3dc-150b-408b-af13-5dc028d328bf" class="">
+</p></details></li></ul><ul id="9c447341-e7e7-46d3-b3a8-422cf1b29040" class="toggle"><li><details open=""><summary><strong>Doutrina Sobre o Dinheiro</strong></summary><hr id="ca3d0c8a-c787-475a-9172-259cb66a7629"/><ul id="8e7518e7-4796-486e-b2d7-f29510aafda8" class="bulleted-list"><li style="list-style-type:disc">Bens que durante um período no tempo e lugar são os mais vendáveis, aceitos em trocas por qualquer pessoa (aumentando sua probabilidade de achar outro vendedor que aceite este por bens que deseja)</li></ul><ul id="4be1b193-3cca-427d-861a-5529159b02c4" class="bulleted-list"><li style="list-style-type:disc">Definido pelo costume</li></ul><ul id="ec6e736d-4a7a-48e9-81a5-f5e7534dfcb8" class="bulleted-list"><li style="list-style-type:disc">Torna-se natural, uma vez que a venda de um bem por um bem mais vendável, mesmo que não atenda a necessidade o deixa mais próximo de atendê-la.<ul id="a87e97ed-2ebd-4754-a5b4-f44e41e2e6b9" class="bulleted-list"><li style="list-style-type:circle">Gado (logística embutida!)</li></ul><ul id="589628b3-dd4f-4554-b864-70edce34e6b1" class="bulleted-list"><li style="list-style-type:circle">Metais (gado não cabe na casa da cidade) - cobre, prata e ouro.</li></ul></li></ul></details></li></ul></div></details><p id="048b2e6a-27c6-4c15-a1a0-1d0febc45a65" class="">
+</p></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>
