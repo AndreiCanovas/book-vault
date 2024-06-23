@@ -1,0 +1,684 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>O Caminho da Servidão</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+    margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-uiBlue { background-color: rgba(35, 131, 226, .07); }
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-transparentGray { background-color: rgba(227, 226, 224, 0); }
+.select-value-color-translucentGray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+.select-value-color-pageGlass { background-color: undefined; }
+.select-value-color-washGlass { background-color: undefined; }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="4b297ef2-9d6e-487a-b911-629e45d33f7c" class="page sans"><header><h1 class="page-title"><em>O Caminho da Servidão</em></h1><p class="page-description"></p><table class="properties"><tbody><tr class="property-row property-row-date"><th><span class="icon property-icon"><svg role="graphics-symbol" viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0" class="typesDate"><path d="M3.29688 14.4561H12.7031C14.1797 14.4561 14.9453 13.6904 14.9453 12.2344V3.91504C14.9453 2.45215 14.1797 1.69336 12.7031 1.69336H3.29688C1.82031 1.69336 1.05469 2.45215 1.05469 3.91504V12.2344C1.05469 13.6973 1.82031 14.4561 3.29688 14.4561ZM3.27637 13.1162C2.70898 13.1162 2.39453 12.8154 2.39453 12.2207V5.9043C2.39453 5.30273 2.70898 5.00879 3.27637 5.00879H12.71C13.2842 5.00879 13.6055 5.30273 13.6055 5.9043V12.2207C13.6055 12.8154 13.2842 13.1162 12.71 13.1162H3.27637ZM6.68066 7.38086H7.08398C7.33008 7.38086 7.41211 7.30566 7.41211 7.05957V6.66309C7.41211 6.41699 7.33008 6.3418 7.08398 6.3418H6.68066C6.44141 6.3418 6.35938 6.41699 6.35938 6.66309V7.05957C6.35938 7.30566 6.44141 7.38086 6.68066 7.38086ZM8.92285 7.38086H9.31934C9.56543 7.38086 9.64746 7.30566 9.64746 7.05957V6.66309C9.64746 6.41699 9.56543 6.3418 9.31934 6.3418H8.92285C8.67676 6.3418 8.59473 6.41699 8.59473 6.66309V7.05957C8.59473 7.30566 8.67676 7.38086 8.92285 7.38086ZM11.1582 7.38086H11.5547C11.8008 7.38086 11.8828 7.30566 11.8828 7.05957V6.66309C11.8828 6.41699 11.8008 6.3418 11.5547 6.3418H11.1582C10.9121 6.3418 10.8301 6.41699 10.8301 6.66309V7.05957C10.8301 7.30566 10.9121 7.38086 11.1582 7.38086ZM4.44531 9.58203H4.84863C5.09473 9.58203 5.17676 9.50684 5.17676 9.26074V8.86426C5.17676 8.61816 5.09473 8.54297 4.84863 8.54297H4.44531C4.20605 8.54297 4.12402 8.61816 4.12402 8.86426V9.26074C4.12402 9.50684 4.20605 9.58203 4.44531 9.58203ZM6.68066 9.58203H7.08398C7.33008 9.58203 7.41211 9.50684 7.41211 9.26074V8.86426C7.41211 8.61816 7.33008 8.54297 7.08398 8.54297H6.68066C6.44141 8.54297 6.35938 8.61816 6.35938 8.86426V9.26074C6.35938 9.50684 6.44141 9.58203 6.68066 9.58203ZM8.92285 9.58203H9.31934C9.56543 9.58203 9.64746 9.50684 9.64746 9.26074V8.86426C9.64746 8.61816 9.56543 8.54297 9.31934 8.54297H8.92285C8.67676 8.54297 8.59473 8.61816 8.59473 8.86426V9.26074C8.59473 9.50684 8.67676 9.58203 8.92285 9.58203ZM11.1582 9.58203H11.5547C11.8008 9.58203 11.8828 9.50684 11.8828 9.26074V8.86426C11.8828 8.61816 11.8008 8.54297 11.5547 8.54297H11.1582C10.9121 8.54297 10.8301 8.61816 10.8301 8.86426V9.26074C10.8301 9.50684 10.9121 9.58203 11.1582 9.58203ZM4.44531 11.7832H4.84863C5.09473 11.7832 5.17676 11.708 5.17676 11.4619V11.0654C5.17676 10.8193 5.09473 10.7441 4.84863 10.7441H4.44531C4.20605 10.7441 4.12402 10.8193 4.12402 11.0654V11.4619C4.12402 11.708 4.20605 11.7832 4.44531 11.7832ZM6.68066 11.7832H7.08398C7.33008 11.7832 7.41211 11.708 7.41211 11.4619V11.0654C7.41211 10.8193 7.33008 10.7441 7.08398 10.7441H6.68066C6.44141 10.7441 6.35938 10.8193 6.35938 11.0654V11.4619C6.35938 11.708 6.44141 11.7832 6.68066 11.7832ZM8.92285 11.7832H9.31934C9.56543 11.7832 9.64746 11.708 9.64746 11.4619V11.0654C9.64746 10.8193 9.56543 10.7441 9.31934 10.7441H8.92285C8.67676 10.7441 8.59473 10.8193 8.59473 11.0654V11.4619C8.59473 11.708 8.67676 11.7832 8.92285 11.7832Z"></path></svg></span>Started At</th><td><time>@07/07/2023 → 05/08/2023</time></td></tr><tr class="property-row property-row-select"><th><span class="icon property-icon"><img src="https://www.notion.so/icons/bookmark_gray.svg" style="width:14px;height:14px"/></span>Status</th><td><span class="selected-value select-value-color-default">Finished</span></td></tr><tr class="property-row property-row-multi_select"><th><span class="icon property-icon"><svg role="graphics-symbol" viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0" class="typesMultipleSelect"><path d="M1.91602 4.83789C2.44238 4.83789 2.87305 4.40723 2.87305 3.87402C2.87305 3.34766 2.44238 2.91699 1.91602 2.91699C1.38281 2.91699 0.952148 3.34766 0.952148 3.87402C0.952148 4.40723 1.38281 4.83789 1.91602 4.83789ZM5.1084 4.52344H14.3984C14.7607 4.52344 15.0479 4.23633 15.0479 3.87402C15.0479 3.51172 14.7607 3.22461 14.3984 3.22461H5.1084C4.74609 3.22461 4.45898 3.51172 4.45898 3.87402C4.45898 4.23633 4.74609 4.52344 5.1084 4.52344ZM1.91602 9.03516C2.44238 9.03516 2.87305 8.60449 2.87305 8.07129C2.87305 7.54492 2.44238 7.11426 1.91602 7.11426C1.38281 7.11426 0.952148 7.54492 0.952148 8.07129C0.952148 8.60449 1.38281 9.03516 1.91602 9.03516ZM5.1084 8.7207H14.3984C14.7607 8.7207 15.0479 8.43359 15.0479 8.07129C15.0479 7.70898 14.7607 7.42188 14.3984 7.42188H5.1084C4.74609 7.42188 4.45898 7.70898 4.45898 8.07129C4.45898 8.43359 4.74609 8.7207 5.1084 8.7207ZM1.91602 13.2324C2.44238 13.2324 2.87305 12.8018 2.87305 12.2686C2.87305 11.7422 2.44238 11.3115 1.91602 11.3115C1.38281 11.3115 0.952148 11.7422 0.952148 12.2686C0.952148 12.8018 1.38281 13.2324 1.91602 13.2324ZM5.1084 12.918H14.3984C14.7607 12.918 15.0479 12.6309 15.0479 12.2686C15.0479 11.9062 14.7607 11.6191 14.3984 11.6191H5.1084C4.74609 11.6191 4.45898 11.9062 4.45898 12.2686C4.45898 12.6309 4.74609 12.918 5.1084 12.918Z"></path></svg></span>Tags</th><td><span class="selected-value select-value-color-gray">Economia</span><span class="selected-value select-value-color-purple">Prático</span></td></tr><tr class="property-row property-row-select"><th><span class="icon property-icon"><img src="https://www.notion.so/icons/kind_gray.svg" style="width:14px;height:14px"/></span>Type</th><td><span class="selected-value select-value-color-blue">Expositivo</span></td></tr><tr class="property-row property-row-select"><th><span class="icon property-icon"><img src="https://www.notion.so/icons/hashtag_gray.svg" style="width:14px;height:14px"/></span>Year</th><td><span class="selected-value">2023</span></td></tr><tr class="property-row property-row-multi_select"><th><span class="icon property-icon"><img src="https://www.notion.so/icons/user_gray.svg" style="width:14px;height:14px"/></span>Author</th><td><span class="selected-value select-value-color-gray">Friedrich August von Hayek</span></td></tr><tr class="property-row property-row-number"><th><span class="icon property-icon"><svg role="graphics-symbol" viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0" class="typesNumber"><path d="M2.4834 10.9902H4.33594L3.75488 13.8887C3.74121 13.9639 3.72754 14.0664 3.72754 14.1416C3.72754 14.5381 3.99414 14.7637 4.39746 14.7637C4.81445 14.7637 5.09473 14.5449 5.18359 14.1143L5.80566 10.9902H8.79297L8.21191 13.8887C8.19824 13.9639 8.18457 14.0664 8.18457 14.1416C8.18457 14.5381 8.45117 14.7637 8.85449 14.7637C9.27148 14.7637 9.55176 14.5449 9.63379 14.1143L10.2627 10.9902H12.4502C12.9287 10.9902 13.2432 10.6758 13.2432 10.2109C13.2432 9.8418 12.9902 9.56836 12.6006 9.56836H10.5498L11.2129 6.28711H13.3662C13.8379 6.28711 14.1523 5.96582 14.1523 5.50098C14.1523 5.13184 13.9062 4.8584 13.5098 4.8584H11.5L12.0195 2.27441C12.0264 2.21973 12.0469 2.11035 12.0469 2.01465C12.0469 1.625 11.7666 1.39258 11.3633 1.39258C10.9053 1.39258 10.6797 1.63867 10.5977 2.05566L10.0303 4.8584H7.04297L7.5625 2.27441C7.57617 2.21973 7.58984 2.11035 7.58984 2.01465C7.58984 1.625 7.30957 1.39258 6.91309 1.39258C6.44824 1.39258 6.21582 1.63867 6.13379 2.05566L5.57324 4.8584H3.54297C3.06445 4.8584 2.75 5.18652 2.75 5.65137C2.75 6.03418 3.00293 6.28711 3.39258 6.28711H5.28613L4.62305 9.56836H2.63379C2.15527 9.56836 1.84082 9.89648 1.84082 10.3613C1.84082 10.7373 2.09375 10.9902 2.4834 10.9902ZM6.09277 9.56836L6.75586 6.28711H9.74316L9.08008 9.56836H6.09277Z"></path></svg></span>Pages</th><td>232</td></tr><tr class="property-row property-row-number"><th><span class="icon property-icon"><img src="https://www.notion.so/icons/calendar-day_gray.svg" style="width:14px;height:14px"/></span>From</th><td>1944</td></tr><tr class="property-row property-row-formula"><th><span class="icon property-icon"><img src="https://www.notion.so/icons/eject_gray.svg" style="width:14px;height:14px"/></span>Rank</th><td>3</td></tr></tbody></table></header><div class="page-body"><h1 id="740e519a-f41a-415c-a940-c8cd9c84b560" class="">Analítico</h1><hr id="2305fc6d-d57b-4f22-b480-899dc1dc0c41"/><details open=""><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">Estrutura</summary><div class="indented"><hr id="a810595c-6e26-4451-86c5-493ba8554679"/><ol type="1" id="a4d68124-9a79-4637-84ab-fa5b7a953cd7" class="numbered-list" start="1"><li><strong>Tipo</strong><p id="0e1558f1-0405-4f41-9ffc-68d000339f1e" class="">Pratico - Economia e politica / Filosofia</p></li></ol><ol type="1" id="736dac2a-76e4-4317-9065-0dd562d9abde" class="numbered-list" start="2"><li><strong>Unidade</strong><p id="4e028a5e-1e74-45c5-8306-4a7f879bf14b" class="">Uma critica (<mark class="highlight-gray"><em>por uma agressão a certos valores fundamentais</em></mark>) contra sistemas políticos de planejamento econômico (<mark class="highlight-gray"><em>nacional-socialismo, comunismo, social-democracia, etc.</em></mark>), suas consequências (<mark class="highlight-gray"><em>totalitarismo</em></mark>) e por que elas acontecem.</p></li></ol><ol type="1" id="0e5fd1d8-e6d4-41f8-ad39-272f19d6f315" class="numbered-list" start="3"><li><strong>Ordenação</strong><ul id="24adfe0d-2807-448a-a0be-19566c868e6a" class="toggle"><li><details open=""><summary><strong>Introdução</strong></summary><hr id="0ad96b1e-7bd3-47ae-a273-3ed2e810cc0a"/><p id="c0b44874-7ee6-4d9b-96f3-b505a6e265af" class="">O livro vai se basear na Alemanha pós WW-I (origem no nazismo) e usar este exemplo do que a Inglaterra pós WW-II pode esperar se seguir este caminho, dada sua semelhança com a Alemanha daquela época a respeito de suas correntes de ideias (planejamento de exceção, durante a guerra, seja mantido para fins de produção). </p><p id="f7ba17b1-934d-4a38-a9ac-e8890bbe640a" class="">Existe um segundo ponto da aceitação por parte do publico inglês socialista de admitir que o socialismo defendido leva aos mesmos fins que o totalitarismo alemão.</p><p id="c5551ae3-6bb6-4988-b70e-45ebb724e728" class="block-color-gray_background">  <strong>Quotes</strong></p><blockquote id="204b8012-3652-48b3-9cfd-6553747046de" class="block-color-orange_background"><em>“[…] a acensão do nazismo e fascismo não foi uma reação contra as tendencias socialistas do período precedente, mas o resultado necessário dessas mesmas tendencias“.</em></blockquote><p id="7b82f7f3-091a-4a85-ac39-fd5f153d9578" class="block-color-gray_background">  <strong>Observações</strong></p><ul id="3c229108-2b69-44bd-b488-842cc88824d8" class="bulleted-list"><li style="list-style-type:circle">Parece que a Inglaterra tomava o socialismo alemão pós WW-I como referência.8</li></ul></details></li></ul><ul id="7dfeef89-c209-4fbe-a5a0-514a0f906b86" class="toggle"><li><details open=""><summary><strong>Abandono do liberalismo</strong></summary><hr id="a19845e7-11f1-4c0a-8927-9d0b3d1b1e3a"/><p id="3efb4bb6-fa61-4d59-b508-c1419839a21b" class="">Renuncia do liberalismo do século XVIII e XIX, e do individualismo (supremacia de suas preferencias e opiniões na esfera individual) grego-cristão devido a falta de entendimento de que estes foram os princípios responsáveis por desenvolver o bem-estar a ciência (<em><mark class="highlight-gray">liberdade para financiar, experimentar e aplicar</mark></em>), etc. do mundo ocidental (<mark class="highlight-gray"><em>o desenvolvimento já não parecia rápido o bastante</em></mark>). Apos anos, a riqueza alcançada parecia dada e dai exigências positivas e a importação de ideias Alemães (Marx, etc..) ou final do seculo XIX e inicio do XX.</p></details></li></ul><ul id="cacb8cb0-e9e9-4650-9f44-81945dd157a3" class="toggle"><li><details open=""><summary><strong>Utopia Social-Democracia</strong></summary><hr id="715a6643-e379-4014-b0b4-f845652224d8"/><p id="4ac2e2c3-a199-4692-96fc-1ce1bc21e75f" class="">Adesão de uma nova liberdade socialista, a liberdade econômica, o individuo sem necessidades (a crença de que socialismo e liberdade podem ser conciliados). Entretanto não existe criação de riqueza e sim a redistribuição coercitiva, o caminho leva necessariamente aos regimes totalitários.</p><p id="5e8370f6-660b-47b4-b16e-56e92f1a8c48" class="block-color-gray_background">  <strong>Quotes</strong></p><blockquote id="ac49a5ad-acf4-40bd-a291-67ab21022bac" class="block-color-orange_background"><em>“[…] O fascismo é o estágio atingido depois que o comunismo se revela uma ilusão. Conforme aconteceu tanto na Russia stalinista como na Alemanha pre-hitlerista“.</em></blockquote><p id="34117116-4e5a-4313-87d9-2c2229c9224e" class="block-color-gray_background">  <strong>Observações</strong></p><ul id="e245b724-78c0-47f0-8555-d01df92f7fc1" class="bulleted-list"><li style="list-style-type:circle">Como a democracia conversava com o liberalismo no seculo XIX.</li></ul></details></li></ul><ul id="320215d6-877d-46c4-ac48-cd025a497d53" class="toggle"><li><details open=""><summary><strong>Concorrência vs Socialismo</strong></summary><hr id="9e84533e-01cf-425a-a469-5d9966cdbe2d"/><p id="8e32c22e-5753-40c5-8021-2c03a3fcce4d" class=""><span style="border-bottom:0.05em solid">Socialismo</span></p><ul id="6f3b9a0f-7dae-43d2-a3a1-a7cdc385cb1d" class="bulleted-list"><li style="list-style-type:disc">Fins: <em><mark class="highlight-gray">Justiça social, igualdade e segurança (considerando a boa fé dos adeptos).</mark></em></li></ul><ul id="10b18a25-4097-40e4-b9ff-8697fdee4300" class="bulleted-list"><li style="list-style-type:disc">Meios: <em><mark class="highlight-gray">Abolição da propriedade, planejamento central ao invés de incentivos de lucro</mark></em>.</li></ul><p id="ac7de50a-2d82-40f2-8cc2-31768f0a6c67" class="">Um dos principais problemas é que ao longo do processo esses mesmo <em>meios</em> podem levar a outros <em>fins </em>(interesses pessoais ou de grupos)<em>. </em>O ponto de divergência então é para com os <em>meios</em> e não os <em>fins</em>. </p><p id="b328460c-e371-4eff-ae1d-c9268a87b5cd" class="">A Concorrência é o principal argumento como melhor meio para os mesmos fins. Assim o autor defende certa intervenção do governo em mecanismos/instituições que auxiliem a eficacia da concorrência de mercado (moeda, sistema legal, liberdade de contratos, etc..), ou ainda em setores que o meio não funciona, como vias publicas, impactos negativos não mapeados (poluição sonora, descarte, etc..), em que os gastos jamais compensariam os lucros.</p><p id="6444a4b7-8922-4c46-98c0-cfcfccb17fb0" class="block-color-gray_background">  <strong>Observações</strong></p><ul id="1bfc77fd-e55e-4db3-a318-1b0fe64b6294" class="bulleted-list"><li style="list-style-type:circle">Como seria a solução das vias publicas por exemplo?</li></ul></details></li></ul><ul id="f32ef99e-9e4e-49e1-868a-fd0646aef395" class="toggle"><li><details open=""><summary><strong>Planificação necessária</strong></summary><hr id="ce8ffde2-29ff-48a3-9111-a75b0a07a691"/><p id="67a80afa-106e-49b3-a544-1261a02a5f7b" class="">Argumento Socialista: <em><mark class="highlight-gray">Necessária pois o desenvolvimento tecnológico cria monopólios privados, logo devemos optar pelos monopólios estatais. Ou que existe especialistas que sabem quais as áreas de necessidade que devem ser subsidiadas em detrimento de outras.</mark></em></p><p id="2b190a18-5ac5-4a57-8327-b1a90ddec69d" class="">Hayek coloca o argumento que esses monopólios ocorrem não pela eficiência, mas sim por privilégios governamentais concedidos a determinadas empresas ou setores. É justamente a complexidade do mercado e da divisão do trabalho que impossibilita um órgão de planejamento central.</p><p id="77a04437-0218-4607-9953-e9034e51889b" class="">No pondo do especialista, todos poderíamos ser sobre o nosso ponto de vista particular do que seria ou não prioridade. E esses são os perigosos, pois são sobre seus ideias que julgam todos os outros não importantes, fazendo com que sua vontade se sobreponha aos demais.</p><figure class="block-color-teal_background callout" style="white-space:pre-wrap;display:flex" id="9a76b8cf-f5bc-4834-a57a-4d8eaf9ee47d"><div style="font-size:1.5em"><span class="icon">✅</span></div><div style="width:100%"><strong>[pág. 69] </strong>Modo como o Hayek interpreta o mercado como uma instituição orgânica. E o sistema de preços como um sinal informacional.</div></figure><p id="a972fd7f-e873-4f8b-a738-31c64992235f" class="block-color-gray_background">  <strong>Observações</strong></p><ul id="8aec7c40-3b96-4b5d-8cdf-3a39a6ab2621" class="bulleted-list"><li style="list-style-type:circle">Quais os problemas dos monopólios privados? Eles não trazem um custo de oportunidade?</li></ul></details></li></ul><ul id="f62a9836-0e38-42b8-a2b5-4d74b5ceb0db" class="toggle"><li><details open=""><summary><strong>Planificação e Democracia</strong></summary><hr id="3a61eee8-5373-4bbb-8b38-96d347d483b1"/><p id="0f4be6d0-5b87-46bb-943f-b39af9ea5004" class="">Impossível organizar a sociedade em função de um conjunto ordenado de necessidades e valores, uma vez que cada conjunto esta na cabeça de cada individuo e mesmo que mapeado as ordenações não são iguais entre os indivíduos. O que não invalida o esforço conjunto de indivíduos sobre um meio, contanto que seja voluntario.</p><p id="74c23e8f-561e-4e0e-b16e-eed977f92e27" class="block-color-gray_background">  <strong>Quotes</strong></p><blockquote id="57f778f1-a59b-462a-8c35-c0c8b4c9eaea" class="block-color-orange_background"><em>“O clamor por um ditador econômico […]“.</em></blockquote><p id="3bdec745-c4e5-493e-92e6-4ae537d47699" class="block-color-gray_background">  <strong>Observações</strong></p><ul id="948fd00e-470d-4115-87f2-32bf94c26efe" class="bulleted-list"><li style="list-style-type:circle">Parece haver uma validação do processo conjunto através de um sistema democrático (para os casos em que possível mapear as possíveis acoes e majoritariamente selecionar uma), entre tando não é mencionado como isso se aplica para uma pessoa que não gostaria de participar do processo democrático e mesmo assim seria afetada pela ação.</li></ul><ul id="5ef6ff60-f68a-454f-9d0a-529260ad47a4" class="bulleted-list"><li style="list-style-type:disc">A democracias para regras normativa parece fazer sentido (por exemplo no direito civil; ate a decisão por um comitê técnico poderia ser assumida) porém para questões econômicas torna-se impossível o consenso entre infinitas possibilidades.</li></ul><ul id="f4c83de2-3849-41d4-8ca3-8943090f5601" class="bulleted-list"><li style="list-style-type:disc">E assim, o problema para Hayek esta nos casos em que o congresso delega essas escolhas a um corpo técnico com poder de escolha. E gradativamente delega cada vez mais decisões, convertendo um sistema democrático em um sistema totalitário. </li></ul></details></li></ul><ul id="22c026ec-bc79-4f2f-9cd0-ee28575c26b0" class="toggle"><li><details open=""><summary><strong>Planificação e o Estado de Direito</strong></summary><hr id="c0e8d52b-c83a-4f22-bede-d9284bef03e6"/><p id="0addcc45-ac6a-4a99-9d7a-f115730231eb" class="">Define a importância de um estado de Direito (direito formal) baseado em normas gerais sem objetivos concretos (regras para os meios e não fins), o que garante um povo que não sera manipulado por acoes arbitrarias de legisladores. Diz ainda que o estado ira agir, entretanto agrande importância não e a não ação, mas a possibilidade dos indivíduos preverem suas acoes e quando elas acontecem, alem destas serem perenes no tempo.</p><p id="a97cfdca-bc48-44a2-aa65-31c7e547f87a" class=""><strong>Perigo</strong>: Acreditar que enquanto as acoes do estado forem autorizadas pela lei, o estado de Direito esta assegurado.</p><p id="8c32b38c-fd86-499c-a394-3a1397487a68" class="block-color-gray_background">  <strong>Quotes</strong></p><blockquote id="656772f4-76b1-400d-a9bc-64a351a882ae" class="block-color-orange_background"><em>“A característica que mais claramente distingue um pais livre de um pais submetido a um governo arbitrário é a observância, no primeiro, dos grandes princípios conhecidos como o Estado de Direito“.</em></blockquote><blockquote id="b614e477-0b3d-4b27-b54a-3a4b841f3f08" class="block-color-orange_background"><em>“Quando os resultados particulares são previstos na ocasião em que se faz uma lei, esta perde o caráter de simples instrumento a ser empregado pelo povo e converte-se num instrumento usado pelo legislador para controlar o povo“.</em></blockquote></details></li></ul><ul id="7ecfeb63-5220-45fe-95b0-f73a79c03bd3" class="toggle"><li><details open=""><summary><strong>Controle Econômico da Planificação</strong></summary><hr id="c7ff6111-4c80-41fb-a0c1-821129d9acfd"/><p id="a7d5929d-836f-4f3e-8c82-7068e11af753" class="">Alerta sobre o cuidado de confundir a afirmação que o planejamento atua <em>apenas como controle econômico</em>. Isso não significa que as questões menos importantes ou marginais serão planejadas, mas de fato toda a atividade econômica (meios para atendimento de necessidades). Necessariamente todo poder de escolha e priorização individual é atribuído ao órgão central.</p></details></li></ul><ul id="796fd324-d76a-42e0-a4cb-c55514be77f8" class="toggle"><li><details open=""><summary><strong>Causas no Planejamento</strong></summary><hr id="3b07813f-f10c-470c-b19a-f8e911f0a0a7"/><p id="c72bfe61-7d4b-44f9-a31d-266a16f4f369" class="">A diferença da legitimidade de um sistema de concorrência e um planejado:</p><ul id="8d194f12-2b47-470f-a5be-071612abed6a" class="bulleted-list"><li style="list-style-type:disc">Concorrência: É impessoal, e as boas ou mas consequências são resultados de méritos individuais e/ou boa e ma sorte. Alem de ser livre. </li></ul><ul id="b58739e6-1deb-4ca1-980f-a7cac2a4a752" class="bulleted-list"><li style="list-style-type:disc">Planejado: Existe um ser que ocasiona essas consequências, sendo assim, principalmente nas negativas e discriminatórias, essas são efeitos de agentes objetivos.</li></ul><p id="996729d4-2080-4f4d-97da-b9d15ae042ca" class="">Este fato torna tais consequências muito mais difíceis de serem suportas pelos indivíduos, poes delas sabemos os culpados.</p><p id="30941974-f4b8-48c3-bb10-61e59a16e322" class="">A influencia pela educação por tanto se faz necessária, afinal trate-se de conseguir doutrinar os adeptos, uma vez que racionalmente as pessoas não escolheriam a perda de suas decisões.</p><figure class="block-color-teal_background callout" style="white-space:pre-wrap;display:flex" id="042cfe4d-1d3f-4261-acf4-b0033699096c"><div style="font-size:1.5em"><span class="icon">✅</span></div><div style="width:100%"><strong>[pág. 117] </strong>Mudam-se assim os incentivos econômicos para incentivos políticos.</div></figure><p id="70e7c775-1b32-42a0-bda0-5f996d6a9851" class="block-color-gray_background">  <strong>Quotes</strong></p><blockquote id="4b17b0c5-39b6-4c98-899f-44dec21c47b3" class="block-color-orange_background"><em>“E quem negara que um mundo em que os ricos são poderosos ainda é preferível aquele em que só os poderosos podem adquirir riquezas?“.</em></blockquote></details></li></ul><ul id="e84fe174-dc29-4a8e-a44d-78f6f292a121" class="toggle"><li><details open=""><summary><strong>Segurança Econômica</strong></summary><hr id="ee4c6b94-8a41-422a-a50b-aa7a0ca0a9cc"/><ul id="4bc6c7ed-1c76-4766-b5c8-1349c5abfdb9" class="bulleted-list"><li style="list-style-type:disc">Segurança econômica minima, que pode ser provida sem impacto dos indivíduos (alimentação, saúde e moradia) e imprevistos (doenças e desastres naturais, etc.)</li></ul><ul id="2bcc40e3-0d54-478e-8019-1c45d4a9d199" class="bulleted-list"><li style="list-style-type:disc">Relativa: Praticamente a máxima da liberdade econômica (impossível de atingir</li></ul><p id="e40b6e8b-88b6-4d51-bb50-98e34a179c09" class="">O autor defende uma proposta de previdência social minima em casos em que o individuo fica muito vulnerável (meios de subsistência, desastres, etc.) </p><p id="ada5a5b3-32f7-46f6-89b2-b389f714e919" class="">Outro ponto que a partir do momento em que privilégios são dados a uma classe o risco para os demais aumenta, fazendo com que os incentivos sejam deturpados. As pessoas passam assim a buscar a opção de menor risco: seu próprio privilegio.</p></details></li></ul><ul id="4676736e-5c24-403f-b05c-8a11ed13665e" class="toggle"><li><details open=""><summary><strong>Os Piores Chegam ao Poder</strong></summary><hr id="a537014f-2104-4438-9c09-5b8284e56050"/><p id="2eac88a1-384d-43c0-b17a-5de2ca684992" class="">Aquele que esta disposto a planejar, terá que se sobrepor aos outros. Devera ser capaz de relativizar as necessidades e escolher quem sera agraciado e quem sera amaldiçoado.</p><p id="fb7a601b-bd9c-446d-8440-e9202e48fb7d" class="">O grupo totalitário reúne pessoas com 3 características: as de valores comuns, as de valores facilmente influenciáveis e aquelas que tem um “inimigo em comum”.</p><ul id="701ec358-85a1-4549-9f0d-4dd7c4bc735b" class="bulleted-list"><li style="list-style-type:disc">O Socialismo tem no poder um fim em si mesmo.</li></ul></details></li></ul><ul id="a97c6608-4279-4a81-97f3-5e16b994fa7e" class="toggle"><li><details open=""><summary><strong>Abolição da Verdade</strong></summary><hr id="f76c2388-2e39-4f0c-b0dc-6fc870463372"/><ul id="a805bc37-12b3-447a-9682-aabf38734fc6" class="bulleted-list"><li style="list-style-type:disc"><span style="border-bottom:0.05em solid">Ideologia:</span><strong> </strong>A obrigação por si só é um meio ineficiente para o controle, assim entram em ação a ideologia, convencer as pessoas que os ideias coletivos são seus próprios ideias.</li></ul><ul id="47406040-d9be-46af-98ad-13144e9fc230" class="bulleted-list"><li style="list-style-type:disc"><span style="border-bottom:0.05em solid">Propaganda:</span> vira o meio mais eficiente de controlar as pessoas, justificando as medidas arbitrarias tomadas com base em alguma “<em>teoria justa pre-concebida”</em>.</li></ul><ul id="f8887c86-cedc-487d-8383-be7a69b32ef5" class="bulleted-list"><li style="list-style-type:disc"><span style="border-bottom:0.05em solid">Censura:</span> Opiniões divergentes ou duvidas devem ser tolidas, pois nada deve colaborar para criar um sentimento de injustiça na “massa”.</li></ul><p id="f9e03a0b-ca64-435c-843d-c733622faabc" class="">Todos os aspectos da vida (lazer, ciência, etc..) devem ser encarados como uma oportunidade para impor a ideologia coletivista.</p><p id="2948e52c-9d13-4184-9d82-11ec47c8a45e" class="block-color-gray_background">  <strong>Quotes</strong></p><blockquote id="84737301-7315-473e-9f10-113b2715c29d" class="block-color-orange_background"><em>“[…] num credo aceito por todos, que leve os indivíduos, tanto quanto possível a agir espontaneamente de modo desejado pelo planejador“.</em></blockquote></details></li></ul><ul id="c4500d3d-37c1-4d4d-bb9a-79e69d9e5850" class="toggle"><li><details open=""><summary><strong>Raízes Socialistas</strong></summary><hr id="085c88a8-05f1-484c-a162-709c69a8501b"/><p id="ca78ee8c-3e85-4141-a368-238ce29dc53d" class="">A finalidade do individuo e sacrificar-se por esta vida superior; a vida do povo e do estado.</p><p id="4eb74855-ce5d-4037-b170-8e4215aa0f5e" class="">Primeiro passo: economia de guerra, a partir de 1914 (centralizada com um único objetivo: destruir o ideário mercantil da Inglaterra)</p><ul id="a4583520-2f26-42a1-8cb4-1d7a14d7b2d9" class="bulleted-list"><li style="list-style-type:disc">Fitchte, Lassale, Rodbertus</li></ul><ul id="06783de5-0406-4c20-9b2a-26d0992b5ef7" class="bulleted-list"><li style="list-style-type:disc">Werner Sombart</li></ul><ul id="f8b0716a-0849-4f4e-a094-26e120c8f52e" class="bulleted-list"><li style="list-style-type:disc">Johann Plenge, Lensch</li></ul><ul id="eac4964e-ab21-4ffd-9981-dcdc0c6fc87f" class="bulleted-list"><li style="list-style-type:disc">Spenglers, van der Bruck</li></ul><ul id="077d412c-ddc3-46b9-9604-672033998c16" class="bulleted-list"><li style="list-style-type:disc">E. H. Carr</li></ul><p id="6e09a7b8-854b-4492-9565-f484c68ab3cd" class="block-color-gray_background">  <strong>Quotes</strong></p><blockquote id="c7ebefb0-06c6-4d60-9f52-2e6d520cc377" class="block-color-orange_background"><em>“[…] num credo aceito por todos, que leve os indivíduos, tanto quanto possível a agir espontaneamente de modo desejado pelo planejador“.</em></blockquote></details></li></ul><ul id="424d96e4-873a-4c6a-af00-aa9cfe0aa0ec" class="toggle"><li><details open=""><summary><strong>Terceirização da moral</strong></summary><hr id="d3aea04f-e361-4bf1-8752-27d134d96a3c"/><p id="3a048988-3688-4129-b173-f674a42b800e" class="">O coletivismo permite que terceirizemos nossa moral e escolhas individuais, nos torna mais flexíveis as injustiças acometidas aos outros, pois terceirizamos as escolhas e também as responsabilidades. </p><p id="f178b792-0dcd-46c7-a650-9e0216dafe8b" class="">Sabemos reclamar mais sobre as injustiças sociais, porem fazemos menos sobre.</p><p id="f479bf75-b7a1-4188-9f01-26c2931b0cbe" class="">
+</p></details></li></ul><ul id="ea9dab5d-e0e9-4f5b-88c0-3dd069f7d9f9" class="toggle"><li><details open=""><summary><strong>Federalismo</strong></summary><hr id="426e818a-269e-4d44-854c-d7c65ff6f660"/><p id="50e16469-d36d-4abb-a65e-4ab8a59d120b" class="">O Autor defende a democracia a níveis mais micro, em que o individuo atue e entenda onde realmente as coisas são perceptíveis e que seus valores culturais sejam parecidos. E uma estrutura federativa que possibilite um respeito sobre as mesmas normas sem interferência ou controle. Isso serviria em um nível maior de estados federativos e um estado de direito internacional, por exemplo.</p><p id="2fec21a5-5439-45cf-ba22-97516a952a73" class="">
+</p></details></li></ul></li></ol><ol type="1" id="12a81f3f-c51f-42ea-8238-70542ad9632a" class="numbered-list" start="4"><li><strong>Problemas</strong><figure class="block-color-brown_background callout" style="white-space:pre-wrap;display:flex" id="fbf2cf59-accd-4c69-9c32-bb8f809922bd"><div style="font-size:1.5em"><span class="icon">❓</span></div><div style="width:100%">Quais os resultados indesejados de um planejamento econômico.</div></figure><figure class="block-color-brown_background callout" style="white-space:pre-wrap;display:flex" id="92d9f17f-0509-4339-b8a8-fd8d2726ee57"><div style="font-size:1.5em"><span class="icon">❓</span></div><div style="width:100%">Como ele chega a tais resultados indesejados.</div></figure><figure class="block-color-brown_background callout" style="white-space:pre-wrap;display:flex" id="207c8143-752d-4777-a022-45aed600e347"><div style="font-size:1.5em"><span class="icon">❓</span></div><div style="width:100%">Por que o planejamento econômico produz tais resultados indesejados.</div></figure></li></ol></div></details><details open=""><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">Conteúdo </summary><div class="indented"><hr id="c4b5e612-395a-4452-b101-f646853344b4"/><ol type="1" id="a9438173-ea8b-443c-a54c-46dc11cd1352" class="numbered-list" start="1"><li><strong>Termos</strong><table id="bbd831a8-5859-4928-9c02-793c3817a4d0" class="simple-table"><thead class="simple-table-header"><tr id="70a9a8f1-05ed-4748-9782-8edb1e6f255d"><th id="GIgX" class="block-color-default simple-table-header" style="width:154px"><strong>Termo</strong></th><th id="ApUA" class="simple-table-header-color simple-table-header" style="width:306px"><strong>Significado</strong></th></tr></thead><tbody><tr id="fdb77839-0cf0-47f7-bf00-495bdc1f63b9"><td id="GIgX" class="block-color-default" style="width:154px">Liberal</td><td id="ApUA" class="" style="width:306px">Original, seculo XIX - Inglaterra (ausência de privilégios positivos)</td></tr><tr id="ecf92648-2b6e-494d-ba8c-4727c69446ff"><td id="GIgX" class="block-color-default" style="width:154px">Socialismo</td><td id="ApUA" class="" style="width:306px">Estatização dos meios de produção e planejamento centralizado</td></tr><tr id="812b1421-ffbc-4da1-a000-c46459c4fbef"><td id="GIgX" class="block-color-default" style="width:154px">Planejamento Central</td><td id="ApUA" class="" style="width:306px">Controle centralizado de toda atividade econômica para atingir um determinado fim</td></tr></tbody></table></li></ol><ol type="1" id="2ce4310e-71bb-42b6-88df-3699b5c69384" class="numbered-list" start="2"><li><strong>Proposições</strong><figure class="block-color-blue_background callout" style="white-space:pre-wrap;display:flex" id="d030cd4b-5d52-4ec1-a238-d0f7435eeb2c"><div style="font-size:1.5em"><span class="icon">👤</span></div><div style="width:100%">Existem <em>Valores Fundamentais</em> que não podem ser ignorados.</div></figure><figure class="block-color-blue_background callout" style="white-space:pre-wrap;display:flex" id="c89cee32-d826-4a91-9cea-c958d4afff7d"><div style="font-size:1.5em"><span class="icon">👤</span></div><div style="width:100%">As principais transformações que um controle governamental produz é de ordem psicológica.</div></figure><figure class="block-color-blue_background callout" style="white-space:pre-wrap;display:flex" id="bb83aa31-5e80-49cd-87c7-1ecd5b89e06b"><div style="font-size:1.5em"><span class="icon">👤</span></div><div style="width:100%">As pessoas não conseguem enxergar que o socialismo (social-democracia) e o totalitarismo com causa-efeito. Aceitam os fins e não entendem os meios.</div></figure><figure class="block-color-blue_background callout" style="white-space:pre-wrap;display:flex" id="3b320545-cdb5-4478-9cff-81c8eec27401"><div style="font-size:1.5em"><span class="icon">👤</span></div><div style="width:100%"> É necessário certo <em>planejamento</em> tendo como objetivo garantir a concorrência de mercado.</div></figure></li></ol><ol type="1" id="6c70bbcd-399d-4fd2-97c4-d95e7157139b" class="numbered-list" start="3"><li><strong>Argumentos</strong></li></ol><ol type="1" id="7573e580-dc90-4387-a1bf-5b13a4c7c87c" class="numbered-list" start="4"><li><strong>Soluções</strong></li></ol></div></details><details open=""><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0"><strong>Crítica</strong></summary><div class="indented"><hr id="42f073d3-2414-4dc0-9c4f-f94f49b12a89"/><ol type="1" id="485915a3-2e0d-437a-b1f0-ee8ef27af510" class="numbered-list" start="1"><li><strong>Entendimento</strong><ul id="56dd7422-b0f4-4390-b289-cf28148899b2" class="to-do-list"><li><div class="checkbox checkbox-off"></div> <span class="to-do-children-unchecked">Sim</span><div class="indented"></div></li></ul><ul id="2f2708a5-3429-46b9-89f7-d18436c9a022" class="to-do-list"><li><div class="checkbox checkbox-on"></div> <span class="to-do-children-checked">Quase Tudo</span><div class="indented"></div></li></ul><ul id="afd97683-e5cd-4de7-8f3a-ffe6876a5d6e" class="to-do-list"><li><div class="checkbox checkbox-off"></div> <span class="to-do-children-unchecked">Partes</span><div class="indented"></div></li></ul><ul id="516d52d9-f3d4-432a-8c88-f94bb36f5e7f" class="to-do-list"><li><div class="checkbox checkbox-off"></div> <span class="to-do-children-unchecked">Não</span><div class="indented"></div></li></ul><p id="bbef222a-38f5-4952-a040-89f6d0db09d0" class=""><strong>Dúvidas:</strong></p><figure class="block-color-orange_background callout" style="white-space:pre-wrap;display:flex" id="49ed5bf2-fe8a-4e5f-bc73-71379d2e064a"><div style="font-size:1.5em"><span class="icon">💬</span></div><div style="width:100%"><strong>[pág. 71]</strong> Não entendi os exemplos positivos pontuais que o monopólio traz ao desenvolvimento tecnológico.</div></figure></li></ol><ol type="1" id="2963a3a8-065a-40dd-b254-df426b402301" class="numbered-list" start="2"><li><strong>Justificativas</strong><ol type="a" id="9cff65cf-0fa4-4883-b77c-aed4dac9fc47" class="numbered-list" start="1"><li><strong>Argumentos desinformados</strong><figure class="block-color-yellow_background callout" style="white-space:pre-wrap;display:flex" id="f6b599a3-d30a-464e-9849-18dd9377cda8"><div style="font-size:1.5em"><span class="icon">🚨</span></div><div style="width:100%">Justifica a causa do monopólio privado a intervenções, porém mesmo que o monopólio privado ocorresse por eficiência produtiva, qual seria o problema?</div></figure></li></ol><ol type="a" id="9f8c52c8-800a-4a67-a2c9-408e899040f2" class="numbered-list" start="2"><li><strong>Argumentos mal informados</strong></li></ol><ol type="a" id="7c162f92-0b52-4d7a-9771-f8c19a213721" class="numbered-list" start="3"><li><strong>Argumentos ilógicos</strong><figure class="block-color-yellow_background callout" style="white-space:pre-wrap;display:flex" id="18b87387-c023-4193-bb03-b50ae68eb844"><div style="font-size:1.5em"><span class="icon">🚨</span></div><div style="width:100%">Considera certa intervenção do governo, desde que não <em>interfiram na concorrência</em>. Abrindo espaço para determinações como jornada máxima, obrigações de segurança, etc..</div></figure><figure class="block-color-yellow_background callout" style="white-space:pre-wrap;display:flex" id="4fc011b9-5746-41e5-9cd1-5b39ff5675a4"><div style="font-size:1.5em"><span class="icon">🚨</span></div><div style="width:100%">Defende o processo democrático, principalmente em questões de poucas opções de linhas de ação, defendendo a validade de uma determinação da maioria (a não ser que ele considere valido apenas nos casos em que os indivíduos aceitaram acatar a determinação da maioria — o que não parece fazer sentido mesmo assim).</div></figure></li></ol><ol type="a" id="74d6612b-d759-46b0-993a-c3f2915af83b" class="numbered-list" start="4"><li><strong>Argumentos incompletos</strong></li></ol></li></ol><p id="c903ad19-6d47-49a0-aa09-74fbd014ca3a" class=""><div class="indented"><p id="2244e25a-38db-45fd-ae04-d813683567f3" class="">
+</p></div></p></div></details><p id="e0b05e26-cb27-4580-b9fd-162bf59ef50a" class="">
+</p><p id="a21da0eb-8e9a-4388-996b-f7857d504930" class="">
+</p><p id="3624b939-ad8d-4b56-8dff-ca658478fc30" class="">
+</p><p id="af005b67-601b-429b-b0fd-9f96bd99ce50" class="">
+</p></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>

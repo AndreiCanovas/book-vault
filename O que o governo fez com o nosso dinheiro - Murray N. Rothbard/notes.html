@@ -1,0 +1,681 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>O que o governo fez com o nosso dinheiro?</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+    margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-uiBlue { background-color: rgba(35, 131, 226, .07); }
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-transparentGray { background-color: rgba(227, 226, 224, 0); }
+.select-value-color-translucentGray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+.select-value-color-pageGlass { background-color: undefined; }
+.select-value-color-washGlass { background-color: undefined; }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="d42a8370-eb21-4cc9-ad6d-972becc2451e" class="page sans"><header><h1 class="page-title">O que o governo fez com o nosso dinheiro?</h1><p class="page-description"></p><table class="properties"><tbody><tr class="property-row property-row-date"><th><span class="icon property-icon"><svg role="graphics-symbol" viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0" class="typesDate"><path d="M3.29688 14.4561H12.7031C14.1797 14.4561 14.9453 13.6904 14.9453 12.2344V3.91504C14.9453 2.45215 14.1797 1.69336 12.7031 1.69336H3.29688C1.82031 1.69336 1.05469 2.45215 1.05469 3.91504V12.2344C1.05469 13.6973 1.82031 14.4561 3.29688 14.4561ZM3.27637 13.1162C2.70898 13.1162 2.39453 12.8154 2.39453 12.2207V5.9043C2.39453 5.30273 2.70898 5.00879 3.27637 5.00879H12.71C13.2842 5.00879 13.6055 5.30273 13.6055 5.9043V12.2207C13.6055 12.8154 13.2842 13.1162 12.71 13.1162H3.27637ZM6.68066 7.38086H7.08398C7.33008 7.38086 7.41211 7.30566 7.41211 7.05957V6.66309C7.41211 6.41699 7.33008 6.3418 7.08398 6.3418H6.68066C6.44141 6.3418 6.35938 6.41699 6.35938 6.66309V7.05957C6.35938 7.30566 6.44141 7.38086 6.68066 7.38086ZM8.92285 7.38086H9.31934C9.56543 7.38086 9.64746 7.30566 9.64746 7.05957V6.66309C9.64746 6.41699 9.56543 6.3418 9.31934 6.3418H8.92285C8.67676 6.3418 8.59473 6.41699 8.59473 6.66309V7.05957C8.59473 7.30566 8.67676 7.38086 8.92285 7.38086ZM11.1582 7.38086H11.5547C11.8008 7.38086 11.8828 7.30566 11.8828 7.05957V6.66309C11.8828 6.41699 11.8008 6.3418 11.5547 6.3418H11.1582C10.9121 6.3418 10.8301 6.41699 10.8301 6.66309V7.05957C10.8301 7.30566 10.9121 7.38086 11.1582 7.38086ZM4.44531 9.58203H4.84863C5.09473 9.58203 5.17676 9.50684 5.17676 9.26074V8.86426C5.17676 8.61816 5.09473 8.54297 4.84863 8.54297H4.44531C4.20605 8.54297 4.12402 8.61816 4.12402 8.86426V9.26074C4.12402 9.50684 4.20605 9.58203 4.44531 9.58203ZM6.68066 9.58203H7.08398C7.33008 9.58203 7.41211 9.50684 7.41211 9.26074V8.86426C7.41211 8.61816 7.33008 8.54297 7.08398 8.54297H6.68066C6.44141 8.54297 6.35938 8.61816 6.35938 8.86426V9.26074C6.35938 9.50684 6.44141 9.58203 6.68066 9.58203ZM8.92285 9.58203H9.31934C9.56543 9.58203 9.64746 9.50684 9.64746 9.26074V8.86426C9.64746 8.61816 9.56543 8.54297 9.31934 8.54297H8.92285C8.67676 8.54297 8.59473 8.61816 8.59473 8.86426V9.26074C8.59473 9.50684 8.67676 9.58203 8.92285 9.58203ZM11.1582 9.58203H11.5547C11.8008 9.58203 11.8828 9.50684 11.8828 9.26074V8.86426C11.8828 8.61816 11.8008 8.54297 11.5547 8.54297H11.1582C10.9121 8.54297 10.8301 8.61816 10.8301 8.86426V9.26074C10.8301 9.50684 10.9121 9.58203 11.1582 9.58203ZM4.44531 11.7832H4.84863C5.09473 11.7832 5.17676 11.708 5.17676 11.4619V11.0654C5.17676 10.8193 5.09473 10.7441 4.84863 10.7441H4.44531C4.20605 10.7441 4.12402 10.8193 4.12402 11.0654V11.4619C4.12402 11.708 4.20605 11.7832 4.44531 11.7832ZM6.68066 11.7832H7.08398C7.33008 11.7832 7.41211 11.708 7.41211 11.4619V11.0654C7.41211 10.8193 7.33008 10.7441 7.08398 10.7441H6.68066C6.44141 10.7441 6.35938 10.8193 6.35938 11.0654V11.4619C6.35938 11.708 6.44141 11.7832 6.68066 11.7832ZM8.92285 11.7832H9.31934C9.56543 11.7832 9.64746 11.708 9.64746 11.4619V11.0654C9.64746 10.8193 9.56543 10.7441 9.31934 10.7441H8.92285C8.67676 10.7441 8.59473 10.8193 8.59473 11.0654V11.4619C8.59473 11.708 8.67676 11.7832 8.92285 11.7832Z"></path></svg></span>Started At</th><td><time>@10/09/2023 → 22/09/2023</time></td></tr><tr class="property-row property-row-select"><th><span class="icon property-icon"><img src="https://www.notion.so/icons/bookmark_gray.svg" style="width:14px;height:14px"/></span>Status</th><td><span class="selected-value select-value-color-default">Finished</span></td></tr><tr class="property-row property-row-multi_select"><th><span class="icon property-icon"><svg role="graphics-symbol" viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0" class="typesMultipleSelect"><path d="M1.91602 4.83789C2.44238 4.83789 2.87305 4.40723 2.87305 3.87402C2.87305 3.34766 2.44238 2.91699 1.91602 2.91699C1.38281 2.91699 0.952148 3.34766 0.952148 3.87402C0.952148 4.40723 1.38281 4.83789 1.91602 4.83789ZM5.1084 4.52344H14.3984C14.7607 4.52344 15.0479 4.23633 15.0479 3.87402C15.0479 3.51172 14.7607 3.22461 14.3984 3.22461H5.1084C4.74609 3.22461 4.45898 3.51172 4.45898 3.87402C4.45898 4.23633 4.74609 4.52344 5.1084 4.52344ZM1.91602 9.03516C2.44238 9.03516 2.87305 8.60449 2.87305 8.07129C2.87305 7.54492 2.44238 7.11426 1.91602 7.11426C1.38281 7.11426 0.952148 7.54492 0.952148 8.07129C0.952148 8.60449 1.38281 9.03516 1.91602 9.03516ZM5.1084 8.7207H14.3984C14.7607 8.7207 15.0479 8.43359 15.0479 8.07129C15.0479 7.70898 14.7607 7.42188 14.3984 7.42188H5.1084C4.74609 7.42188 4.45898 7.70898 4.45898 8.07129C4.45898 8.43359 4.74609 8.7207 5.1084 8.7207ZM1.91602 13.2324C2.44238 13.2324 2.87305 12.8018 2.87305 12.2686C2.87305 11.7422 2.44238 11.3115 1.91602 11.3115C1.38281 11.3115 0.952148 11.7422 0.952148 12.2686C0.952148 12.8018 1.38281 13.2324 1.91602 13.2324ZM5.1084 12.918H14.3984C14.7607 12.918 15.0479 12.6309 15.0479 12.2686C15.0479 11.9062 14.7607 11.6191 14.3984 11.6191H5.1084C4.74609 11.6191 4.45898 11.9062 4.45898 12.2686C4.45898 12.6309 4.74609 12.918 5.1084 12.918Z"></path></svg></span>Tags</th><td><span class="selected-value select-value-color-gray">Economia</span></td></tr><tr class="property-row property-row-select"><th><span class="icon property-icon"><img src="https://www.notion.so/icons/kind_gray.svg" style="width:14px;height:14px"/></span>Type</th><td><span class="selected-value select-value-color-blue">Expositivo</span></td></tr><tr class="property-row property-row-select"><th><span class="icon property-icon"><img src="https://www.notion.so/icons/hashtag_gray.svg" style="width:14px;height:14px"/></span>Year</th><td><span class="selected-value">2023</span></td></tr><tr class="property-row property-row-multi_select"><th><span class="icon property-icon"><img src="https://www.notion.so/icons/user_gray.svg" style="width:14px;height:14px"/></span>Author</th><td><span class="selected-value select-value-color-yellow">Murray N. Rothbard</span></td></tr><tr class="property-row property-row-number"><th><span class="icon property-icon"><svg role="graphics-symbol" viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0" class="typesNumber"><path d="M2.4834 10.9902H4.33594L3.75488 13.8887C3.74121 13.9639 3.72754 14.0664 3.72754 14.1416C3.72754 14.5381 3.99414 14.7637 4.39746 14.7637C4.81445 14.7637 5.09473 14.5449 5.18359 14.1143L5.80566 10.9902H8.79297L8.21191 13.8887C8.19824 13.9639 8.18457 14.0664 8.18457 14.1416C8.18457 14.5381 8.45117 14.7637 8.85449 14.7637C9.27148 14.7637 9.55176 14.5449 9.63379 14.1143L10.2627 10.9902H12.4502C12.9287 10.9902 13.2432 10.6758 13.2432 10.2109C13.2432 9.8418 12.9902 9.56836 12.6006 9.56836H10.5498L11.2129 6.28711H13.3662C13.8379 6.28711 14.1523 5.96582 14.1523 5.50098C14.1523 5.13184 13.9062 4.8584 13.5098 4.8584H11.5L12.0195 2.27441C12.0264 2.21973 12.0469 2.11035 12.0469 2.01465C12.0469 1.625 11.7666 1.39258 11.3633 1.39258C10.9053 1.39258 10.6797 1.63867 10.5977 2.05566L10.0303 4.8584H7.04297L7.5625 2.27441C7.57617 2.21973 7.58984 2.11035 7.58984 2.01465C7.58984 1.625 7.30957 1.39258 6.91309 1.39258C6.44824 1.39258 6.21582 1.63867 6.13379 2.05566L5.57324 4.8584H3.54297C3.06445 4.8584 2.75 5.18652 2.75 5.65137C2.75 6.03418 3.00293 6.28711 3.39258 6.28711H5.28613L4.62305 9.56836H2.63379C2.15527 9.56836 1.84082 9.89648 1.84082 10.3613C1.84082 10.7373 2.09375 10.9902 2.4834 10.9902ZM6.09277 9.56836L6.75586 6.28711H9.74316L9.08008 9.56836H6.09277Z"></path></svg></span>Pages</th><td>105</td></tr><tr class="property-row property-row-number"><th><span class="icon property-icon"><img src="https://www.notion.so/icons/calendar-day_gray.svg" style="width:14px;height:14px"/></span>From</th><td>1963</td></tr><tr class="property-row property-row-formula"><th><span class="icon property-icon"><img src="https://www.notion.so/icons/eject_gray.svg" style="width:14px;height:14px"/></span>Rank</th><td>3</td></tr></tbody></table></header><div class="page-body"><details open=""><summary style="font-weight:600;font-size:1.875em;line-height:1.3;margin:0">Analítico</summary><div class="indented"><hr id="8abe0e0f-d7f2-4f19-ac77-eab98f8adeac"/><details open=""><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">Estrutura</summary><div class="indented"><hr id="f7c3c7e6-018f-442b-80bd-9ca85d357463"/><ol type="1" id="9bba4813-fe69-437c-a459-9fc2ee1ec9e0" class="numbered-list" start="1"><li><strong>Tipo</strong><p id="5d00c652-b7e7-43c7-9d18-8d15c8da3127" class="">Economia, Filosofia Politica</p></li></ol><ol type="1" id="c8f8813b-e744-488a-b0e8-adbcbc3145cd" class="numbered-list" start="2"><li><strong>Unidade</strong><blockquote id="13e12009-be65-4538-b8a8-007ecc4010b2" class="block-color-default"><em>“Historicamente, o dinheiro foi um dos primeiros instrumentos a ser usurpado e controlado pelo governo […] .”</em></blockquote><p id="200a5519-c9c2-45fd-8feb-7537dcfafdef" class="">Sobre o que é o dinheiro e como ele se desenvolveu na historia da humanidade. Em uma segunda parte como a interferência do estado na moeda e o monopólio da mesma acaba impactando os agentes envolvidos.</p></li></ol><ol type="1" id="0a91c3c3-25e7-4e9c-9b19-9da91d8a188a" class="numbered-list" start="3"><li><strong>Ordenação</strong><ul id="30a24f26-43d9-4f57-b604-1990d4467ebc" class="toggle"><li><details open=""><summary><strong>O Dinheiro em uma Sociedade livre</strong></summary><hr id="8dcc04f0-b86b-4b9f-8cd7-c686c431992a"/><p id="86f78995-aa44-4d2a-805c-966e1467d022" class=""><span style="border-bottom:0.05em solid">Valor da Troca</span></p><ul id="489b7880-8587-4d94-a4bf-4a9778fe7586" class="bulleted-list"><li style="list-style-type:disc">Troca é a base da economia.</li></ul><ul id="98b3cbc3-1cda-4205-9a06-0a1d0f242960" class="bulleted-list"><li style="list-style-type:disc">Permite que cada individuo e região se especialize em suas habilidades e vantagens e troque por itens faltantes (especialidades de outros).</li></ul><ul id="2472bfa6-a638-4884-b8d4-19d27e924e99" class="bulleted-list"><li style="list-style-type:disc">A troca não é uma troca de bens iguais, se o fosse ela não aconteceria. A troca ocorre por que cada agende valorou de maneira distinta os produtos da transação.</li></ul><p id="17066fa6-ef2d-4c4a-93ba-647642eabeae" class=""><span style="border-bottom:0.05em solid">Escambo (Trocas diretas)</span></p><p id="204912ba-6ed4-4380-abf0-2d9bf26f3d53" class="">Como meio tem pouca eficiência, devido aos problemas da:</p><ol type="1" id="7385c834-34c6-46c1-a88f-721f4eeeb7b9" class="numbered-list" start="1"><li>Indivisibilidade</li></ol><ol type="1" id="6637b931-1e75-496d-9962-ad8383dc8f86" class="numbered-list" start="2"><li>Coincidência de desejos</li></ol><p id="c900230a-3cde-4f87-89ae-f4b1953681a2" class=""><span style="border-bottom:0.05em solid">Trocas Indiretas</span></p><p id="17b8a5e1-d945-4206-90c5-56616a017dea" class="">O individuo realiza uma primeira transação, por um bem que, alem de seu valor de uso, apresenta, e talvez principalmente outra característica: <em><mark class="highlight-default">ser um bem mais comercializável.</mark></em></p><ul id="33a2643f-25dd-47fa-b9f8-4dea3350594d" class="bulleted-list"><li style="list-style-type:disc">Dinheiro: <em>Mercadoria(s) utilizada como meios de troca.</em></li></ul><ul id="18d3d532-9241-486a-8181-36c6b7cb9fab" class="bulleted-list"><li style="list-style-type:disc">Características de um bem utilizado como <em>meio de troca</em>:<ul id="f135121b-6827-4929-bde9-98140909bc12" class="bulleted-list"><li style="list-style-type:circle">Liquidez</li></ul><ul id="f43c76fb-ed0e-4e2d-996b-fad3867e3ecc" class="bulleted-list"><li style="list-style-type:circle">Homogeneidade</li></ul><ul id="d2ba1c42-b914-49b4-9836-d1773d7b3d84" class="bulleted-list"><li style="list-style-type:circle">Divisibilidade</li></ul><ul id="e9f47390-8b72-4d39-9a37-84bd97ec85ae" class="bulleted-list"><li style="list-style-type:circle">Durabilidade</li></ul><ul id="814dd8e1-863e-49a2-a029-931f0b99001e" class="bulleted-list"><li style="list-style-type:circle">Transporte</li></ul></li></ul><ul id="628d1042-2a13-4b09-a3af-531288c6b834" class="bulleted-list"><li style="list-style-type:disc">Definidor de preços: Pessoas conseguem calcular e comparar preços a partir da demanda deste bem, para isso deve haver um histórico rastreável deste valor (<em>quando o bem ainda era uma mercadoria trocada como todas as outras na forma de escambo</em>).</li></ul><p id="e530d5bb-0b3f-4f66-ae3d-b4335c37490f" class=""><span style="border-bottom:0.05em solid">Unidades Monetárias</span></p><ul id="e08594e3-15ce-458a-afcd-bc1609faa3a8" class="bulleted-list"><li style="list-style-type:disc">Enquanto acompanharem o padrão-ouro, são simplesmente relações de unidades de massa.</li></ul><ul id="bc782ac9-db74-4126-8018-fc7f00c6727d" class="bulleted-list"><li style="list-style-type:disc">Para um mercado genuinamente livre, denominações monetárias seriam supérfluas, e tudo poderia ser transacionado em termos de unidades de massa de ouro (gramas, libras, onças, etc.).</li></ul><p id="ac368fe7-2b3b-4d75-b02b-8306fcee56de" class=""><span style="border-bottom:0.05em solid">Cunhagem Privada</span></p><ul id="78d5d1ef-1e8d-4002-81e7-c733cdbae65d" class="bulleted-list"><li style="list-style-type:disc">Empreendedores ficam responsáveis por garantir padronização de peso e pureza, assim como em outros setores produtivos no mercado (medicamentos, pecas, terrenos, etc.)</li></ul><ul id="c64499aa-2767-46e9-966f-57d03a868a67" class="bulleted-list"><li style="list-style-type:disc">A ação fraudulenta no setor não é motivo para controle estatal de monopólio.</li></ul><ul id="5cb54474-89e8-4f74-81ba-34c521911e4a" class="bulleted-list"><li style="list-style-type:disc">Lei de Gresham só é valida quando existe um controle de preços sobre as moedas e não em um livre mercado.</li></ul><p id="2930f723-8fc7-4e12-8f34-f97c87a622c1" class=""><span style="border-bottom:0.05em solid">Oferta Monetária “Adequada”</span></p><p id="dbb9a5f8-ce90-4d8b-a35d-edcfb3fd585d" class="">Qual a quantidade de moeda necessária?</p><ul id="75e81067-75c0-4520-adbf-a9265cf8a261" class="bulleted-list"><li style="list-style-type:disc">O preço de dinheiro é seu <em>poder de compra</em>, o quanto aquela unidade monetária pode comprar de unidades de outros bens.</li></ul><ul id="ebf4f7c2-ea4c-4a82-aa03-8e25260894c1" class="bulleted-list"><li style="list-style-type:disc">O preço do dinheiro esta sujeito assim como para todas as outras mercadorias a lei de <em>oferta e demanda</em>.</li></ul><ul id="850793de-4ed2-4ebb-8d86-fd21d80fcb32" class="bulleted-list"><li style="list-style-type:disc">Demanda por ouro: Quantidade de bens e serviços que os agentes estão dispostos a trocar por ouro, mais a quantidade entesourada e poupada pelos agentes.</li></ul><ul id="0763e93e-3c57-4b85-88d9-540de45bbbd4" class="bulleted-list"><li style="list-style-type:disc">Oferta de ouro: Estoque total de ouro no mercado.</li></ul><ul id="c96289ae-f816-4b5f-b3fd-3bac2b9329f8" class="bulleted-list"><li style="list-style-type:disc">O fato de um aumento na oferta monetária não conferir um beneficio social esta atrelado ao fato de que o principal uso do dinheiro esta como um <em>meio de troca. </em>Sendo que uma maior oferta apenas gera uma diluição no poder de compra.</li></ul><p id="3b4b05c4-f0a7-448d-9cbf-f6b36f1a1b24" class="">Portanto não importa qual seja a oferta monetária, o poder de compra se ajusta.</p><p id="bf4a6c03-f96e-4778-98f5-ff5187fe00ed" class=""><span style="border-bottom:0.05em solid">Estesouramento</span></p><ul id="c87e3e5f-fc54-4aae-90a9-8d33712da196" class="bulleted-list"><li style="list-style-type:disc">Altera a quantidade ofertada (como visto anteriormente, sem impactar a economia).</li></ul><ul id="adc0e553-c5d8-4f30-9c53-aeb2011c3efb" class="bulleted-list"><li style="list-style-type:disc">Serve como uma precaução para um futuro incerto de necessidades.</li></ul><ul id="e95ece4c-1a17-443b-93e4-cfd588680f85" class="bulleted-list"><li style="list-style-type:disc">A inflação e deflação futura influencia na disposição das pessoas de pouparem<ul id="14a29a33-08ff-43cd-95e9-2def88c17f8c" class="bulleted-list"><li style="list-style-type:circle">inflação: <em>perda de valor, incentiva as pessoas a gastarem no presente.</em></li></ul><ul id="f1b6eedb-72f8-424d-b1a4-b360b92d882a" class="bulleted-list"><li style="list-style-type:circle">deflação: <em>aumento de valor, incentiva as pessoas a pouparem para gastarem no futuro.</em></li></ul></li></ul><ul id="b6a1eeb2-9585-4d8f-bb1d-5548a9d39e1c" class="bulleted-list"><li style="list-style-type:disc">Permite a realização de trocas a qualquer momento presente e futuro. </li></ul><p id="3a53b819-cf2f-4131-9734-53a167e07d47" class=""><span style="border-bottom:0.05em solid">Estabilizar nível dos preços?</span></p><p id="fa4dd9dc-5b18-4ac0-b4a3-58fbdc35c245" class="">Assim como qualquer outra mercadoria o dinheiro deve ter seu preço variável decorrente de flutuações na oferta e demanda deste bem, assim como qualquer outro bem no mercado.</p><p id="a82a9862-539d-4da2-8afb-6d76ea42fa57" class=""><span style="border-bottom:0.05em solid">Moedas paralelas</span></p><ul id="d5ee4bd3-5936-4c89-bf72-15a658651a68" class="bulleted-list"><li style="list-style-type:disc">Sem problemas, considerando seu desenvolvimento no livre mercado.</li></ul><p id="c178ed13-cf66-4787-a66b-1d844865ef71" class=""><span style="border-bottom:0.05em solid">Armazéns de dinheiro</span></p><ul id="beeff2fa-79ef-4c34-a78f-ef090018cfce" class="bulleted-list"><li style="list-style-type:disc">Facilitando a posse e transporte do dinheiro de seus proprietários.</li></ul><ul id="8e468b87-5891-40d6-b557-ee8c658da088" class="bulleted-list"><li style="list-style-type:disc">Qualquer proprietário tem direito a reivindicar o dinheiro armazenado a qualquer momento por meio de um <em>recibo de deposito</em>.</li></ul><ul id="888f3871-88d8-4337-8f20-0d8be461ee39" class="bulleted-list"><li style="list-style-type:disc">Tais armazéns prosperam da mesma maneira que qualquer empreendimento no livre mercado: <em>cobrando um valor por seu serviço especializado de armazenagem.</em></li></ul><ul id="30f2b347-3112-4607-b8c1-d328c2d11703" class="bulleted-list"><li style="list-style-type:disc">A conveniência faz então com que a troca aconteça pelos próprios recibos de armazenagem.</li></ul><ul id="3a7a57c4-0666-40f1-b457-fc97896e25f2" class="bulleted-list"><li style="list-style-type:disc">Títulos de papel restituíveis em ouro passam a ser crescentemente utilizados.</li></ul><ul id="2610a4f3-c976-4c7f-be4e-0fe12ef46d13" class="bulleted-list"><li style="list-style-type:disc">O aumento de credibilidade pode também substituir tais títulos (<em>cédulas</em>) por movimentações entre titularidades (<em>contas-corrente ou depósitos bancários</em>) feitas pelo próprio “banco” feitas em ordens escritas (<em>cheques</em>) pelos clientes.</li></ul><ul id="437955c1-5652-4858-a50e-82d89f4ed370" class="block-color-teal_background bulleted-list"><li style="list-style-type:disc">O Titulo representa (como substituto) o ouro armazenado (reserva de valor - lastro do titulo), que não faz mas parte da efetiva oferta monetária na economia.</li></ul><p id="fb36d895-d344-4808-a729-1478b572c5a7" class=""><span style="border-bottom:0.05em solid">Reservas Fracionarias</span></p><ul id="09d7860f-cdfb-485d-b888-59391c0f595e" class="bulleted-list"><li style="list-style-type:disc">Recibos sem lastro (reserva de valor) emitidos para tomadores de empréstimos - Inflação.</li></ul><ul id="79191f01-e6d0-4227-a674-0a1362c3b326" class="bulleted-list"><li style="list-style-type:disc">Aumento artificial da oferta monetária.</li></ul><ul id="6e2e324c-e474-4ebe-b19a-52025e310afe" class="bulleted-list"><li style="list-style-type:disc">Inflação: <em>Qualquer aumento da oferta monetária que não consista em um aumento do estoque do metal ou mercadoria utilizada como dinheiro.</em></li></ul><ul id="38180085-629a-42ef-a169-b70da53c1dd2" class="bulleted-list"><li style="list-style-type:disc">Todo banco que trabalha com reservas fracionarias opera em estado de insolvência.</li></ul><ul id="990fbd4e-f08c-4d25-a3f7-219164afc2de" class="bulleted-list"><li style="list-style-type:disc">Geram as corridas monetárias.</li></ul><ul id="8a7e5f3f-462e-44fd-b70a-3795c5bcfd74" class="bulleted-list"><li style="list-style-type:disc">Limitações para inflação (no livre mercado):<ol type="1" id="ff680297-f51b-4680-83d5-8bc092a0fd42" class="numbered-list" start="1"><li>Tamanho da clientela de cada banco.</li></ol><ol type="1" id="5923c028-d7ea-4f0b-9ef1-0aca0f786574" class="numbered-list" start="2"><li>Quantidade total de clientes do sistema bancário.</li></ol><ol type="1" id="9e6e7fba-cb65-4fdc-87e7-c281971bd000" class="numbered-list" start="3"><li>Confiabilidade no sistema bancário.</li></ol></li></ul><p id="257a555c-8f60-4dfc-be1f-a831f3ba3c57" class="block-color-gray_background"><strong>  Quotes</strong></p><blockquote id="7b626dfe-81b8-47fe-bd59-2524990c5544" class="block-color-yellow_background"><em>“[…] A troca é a força vital não só da economia, mas da própria civilização.”</em></blockquote></details></li></ul><ul id="d57832a0-f817-4ea0-8edf-2cbdcf8cbd1e" class="toggle"><li><details open=""><summary><strong>A Interferência do Governo na moeda</strong></summary><hr id="0b8a64ca-22d7-46be-a791-424a55e11893"/><p id="2cf3171f-74ca-46dd-80ea-21b169d92be7" class=""><span style="border-bottom:0.05em solid">Receitas do governo</span></p><ul id="2d654192-dfbb-4d48-8c11-49fdf5ef0318" class="bulleted-list"><li style="list-style-type:disc">Tributação: confisco de bens e serviços e/ou ativos monetários. </li></ul><ul id="1e81d4e1-938f-4f72-b812-8bf36d79b394" class="bulleted-list"><li style="list-style-type:disc">Falsificação: Impressão de dinheiro/Inflação (forma menos impopular que tributação, por ser um “imposto” silencioso).</li></ul><p id="5de9c185-7f47-48d4-8224-e4115fab3c45" class=""><span style="border-bottom:0.05em solid">Efeitos econômicos da inflação</span></p><ul id="6cae2374-72dd-4652-843a-3a87549faf36" class="bulleted-list"><li style="list-style-type:disc">Aumenta o poder de compra localmente, dos primeiros a utilizar o novo dinheiro.</li></ul><ul id="7624a470-80f4-44c1-9883-fadc93e9964a" class="bulleted-list"><li style="list-style-type:disc">O Aumento da oferta de dinheiro ocasiona um aumento dos preços em relação ao mesmo.</li></ul><ul id="1906a5c4-e428-422a-a27d-f5d013ae6cd7" class="bulleted-list"><li style="list-style-type:disc">Assim, pessoas no final da cadeia de utilização deste novo montante, perderão poder de compra, pois terão a mesma quantidade de dinheiro porem lidando com novos preços ajustados a maior oferta de dinheiro na economia.</li></ul><ul id="af29398b-6489-4ab5-97e0-6eecdaff0929" class="bulleted-list"><li style="list-style-type:disc">Distorções no calculo econômico (empreendedor); lucros e contabilidades e nos incentivos de competição do mercado (lucros e prejuízos).</li></ul><ul id="05e2ddb8-6de5-42cd-b9e7-0e96938454dd" class="bulleted-list"><li style="list-style-type:disc">Incentivos ao credito e consumo em detrimento da poupança.</li></ul><ul id="4bd32ed3-96ba-4586-a72e-429095055514" class="bulleted-list"><li style="list-style-type:disc">Descontrole de preços e utilização de moedas paralelas e/ou escambo.</li></ul><ul id="444819b9-2e44-48c6-a19e-d3c383bb295d" class="bulleted-list"><li style="list-style-type:disc">Ciclos econômicos.</li></ul><ul id="25c69682-bc26-4651-9f2b-983c63235565" class="bulleted-list"><li style="list-style-type:disc">Hiperinflação: Pessoas entendem que a inflação não ira parar e tentam o mais rápido possível se livrar da moeda sem lastro, vendendo por qualquer coisa.</li></ul><p id="004bedc5-bf8b-4f26-8f7d-9260a49c8912" class=""><span style="border-bottom:0.05em solid">Monopólio compulsório da moeda</span></p><ul id="b98c4057-2625-4a5c-8ea2-d16978766633" class="bulleted-list"><li style="list-style-type:disc">Antes dos bancos: monopólio da cunhagem.</li></ul><ul id="128702b1-2381-4c6c-8177-a58e47eed604" class="bulleted-list"><li style="list-style-type:disc">Desvincular o nome da moeda ao metal e peso.</li></ul><ul id="011bcb8b-ff10-4f42-b45e-aed88c97a231" class="bulleted-list"><li style="list-style-type:disc">Adulteração da pureza das moedas com outros metais.</li></ul><ul id="70640d43-e55c-4385-80b2-1c870c690512" class="bulleted-list"><li style="list-style-type:disc">Lei de Gresham a partir do controle de preços das moedas e das leis de cunho forçado.</li></ul><p id="da879b7d-b50d-4c9f-9804-f194d2e605fb" class=""><span style="border-bottom:0.05em solid">Não ser necessário restituição em especie pelos bancos</span></p><ul id="7430b3a8-f121-4a14-93ad-89c7f2f5a56c" class="bulleted-list"><li style="list-style-type:disc">Operar com reservas fracionarias </li></ul><ul id="69090dd9-d450-49d4-b87b-04873659ab5d" class="bulleted-list"><li style="list-style-type:disc">No seculo XIX ainda era de uma forma não sistemática, porem ocasionando crises em 1819, 37 e 57.</li></ul><ul id="2e342a00-f67d-4d93-8aac-4a33d231053d" class="bulleted-list"><li style="list-style-type:disc">Governo apenas permite a inflação pelos bancos, mais ainda não a controla diretamente.</li></ul><p id="5727c42d-c140-4db8-b67f-0e33cbed2ec2" class=""><span style="border-bottom:0.05em solid">Criação de um banco central</span></p><ul id="67689df1-588e-4cd3-aa1f-69d577afc1c3" class="bulleted-list"><li style="list-style-type:disc">Monopólio de emissão de cédulas monetárias.</li></ul><ul id="dccef37a-7743-4462-a5ef-f11fea632e80" class="bulleted-list"><li style="list-style-type:disc">Atuando como “garantidor de liquides de outros bancos”.</li></ul><ul id="e64b6499-eed9-4715-93bb-a917f43a902d" class="bulleted-list"><li style="list-style-type:disc">Leis que proíbem incitação publica a “corridas bancarias”.</li></ul><p id="edf45d89-a60f-4c67-8500-d7296f4439d1" class=""><span style="border-bottom:0.05em solid">Banco central - Dirigindo a inflação</span></p><ul id="b4782be2-0720-46c4-a86f-f85a3017e34e" class="bulleted-list"><li style="list-style-type:disc">Controle das reservas bancarias.</li></ul><ul id="4c25a6e3-e177-4484-a7c5-980c7abe2190" class="bulleted-list"><li style="list-style-type:disc">Como os bancos estão imunes a falência, tal medida gera um incentivo para que a expansão de credito seja sempre a máxima (uma vez que os bancos lucram com isso).</li></ul><ul id="c4edcc4f-5953-418f-a1ba-d341709d6564" class="bulleted-list"><li style="list-style-type:disc">Novos padrões barra-ouro (desencorajavam a restituição, mantendo poucos que ainda o faziam, como aqueles que negociavam para o exterior).</li></ul><ul id="1dd79cac-2e8e-4e49-9b3e-a8cf9af06c7e" class="bulleted-list"><li style="list-style-type:disc">Saída do padrão-ouro (a moeda fiduciária sem lastro passa a ser o dinheiro “real”).</li></ul><ul id="4d49766e-cf7b-4970-afa7-8a53bb815fba" class="bulleted-list"><li style="list-style-type:disc">Confisco do ouro, a não ser em quantidades irrisórias como ornamento, etc.</li></ul><p id="0b48cb02-5538-4b21-bf96-ba06b0f5de6d" class=""><span style="border-bottom:0.05em solid">Moeda Fiduciária como padrão</span></p><ul id="f8777933-22b8-4727-a204-c4fd5e2317c4" class="bulleted-list"><li style="list-style-type:disc">Percepção pelos habitantes da desvalorização frente a outras moedas internacionais menos inflacionarias.</li></ul><ul id="8d22a1ed-067f-4e37-be5e-60450d6e8d16" class="bulleted-list"><li style="list-style-type:disc">Afeta as relações de comercio entre estados (importações e exportações).</li></ul><ul id="0a917c09-82d3-4a6e-a0f0-1c0f52ada263" class="bulleted-list"><li style="list-style-type:disc">Incentivo ao protecionismo.</li></ul></details></li></ul><ul id="2d616ffd-6a9b-449d-bb1e-224aeb2c8860" class="toggle"><li><details open=""><summary><strong>O Colapso Monetário do Ocidente</strong>.</summary><hr id="90001717-4f39-4e99-96af-8e92d520be8e"/><p id="10fd170e-32cb-4312-9365-a7d170da6bc8" class=""><span style="border-bottom:0.05em solid">1815 - 1914, Padrão-Ouro Clássico</span></p><ul id="5b7e63c0-24a7-4366-84f0-f51dc063dd45" class="bulleted-list"><li style="list-style-type:disc">livre mercado leva a um dinheiro definido de maneira natural (ouro).</li></ul><ul id="cd85ad07-cab6-4939-9e0d-bc849621464f" class="bulleted-list"><li style="list-style-type:disc">Crescimento e desenvolvimento mundial.</li></ul><ul id="a18d2757-8114-413d-86eb-7f1b7ee5310d" class="bulleted-list"><li style="list-style-type:disc">Incentivo a especialização e divisão internacional do trabalho.</li></ul><p id="ec58aaf2-0d56-47c6-982b-029315364cf4" class=""><span style="border-bottom:0.05em solid">1914 - 1918, Primeira Guerra Mundial</span></p><ul id="eda070e4-d81b-4e2f-9bb9-ec85eccfd39c" class="bulleted-list"><li style="list-style-type:disc">Inflação das moedas e emissões bancarias para financiar a guerra.</li></ul><ul id="177c9147-e43a-4a52-96d0-783adf370314" class="bulleted-list"><li style="list-style-type:disc">Promessa de restituição em ouro futura pelos governos (nunca aconteceu).</li></ul><ul id="a48f26e8-35b2-4d4b-8a1c-6ece31489ceb" class="bulleted-list"><li style="list-style-type:disc">Saída do padrão-ouro com exceção dos EUA.</li></ul><ul id="c2592d89-4da2-4b00-aefd-00d7f0662356" class="bulleted-list"><li style="list-style-type:disc">Ainda era uma decisão mal-vista pelos economistas e população.</li></ul><p id="643ca712-f3da-4eb0-878e-b6bc396cb8d9" class=""><span style="border-bottom:0.05em solid">1926 - 1931, Padrão Ouro-cambio</span></p><ul id="83837be1-0608-4535-b00c-88006b90a1a9" class="bulleted-list"><li style="list-style-type:disc">Conferencia de Gênova 1922.</li></ul><ul id="1df93b32-6723-4daf-8b11-c6e9ac744cdc" class="bulleted-list"><li style="list-style-type:disc">Restituições não em moedas mas apenas em grandes barras.</li></ul><ul id="70c6eb3f-857f-4761-8bda-c0d2c6f066e0" class="bulleted-list"><li style="list-style-type:disc">Inglaterra faria restituições também em dólares e os outros países Europeus em libras.</li></ul><p id="6adbace6-5e57-4cc8-a1de-245affd93e93" class=""><span style="border-bottom:0.05em solid">1931 - 1945, Papeis-moedas flutuantes</span></p><ul id="b70f966b-6b54-448c-8555-21b469154c2e" class="bulleted-list"><li style="list-style-type:disc">Pós crise de 1929.</li></ul><ul id="e182af81-0d4b-4582-9f8c-ee3de191480e" class="bulleted-list"><li style="list-style-type:disc">1933-34 EUA abandonam o padrão-ouro.</li></ul><ul id="8254cfdf-610a-4683-88e0-67337d896809" class="bulleted-list"><li style="list-style-type:disc">Ainda existia o padrão-ouro nos EUA para bancos internacionais.</li></ul><p id="a70ca96c-0ce0-40cd-9962-cfa713330a94" class=""><span style="border-bottom:0.05em solid">1945 - 1968, Bretton Woods (Padrão ouro-cambio americano)</span></p><ul id="21115250-f36b-4140-a072-19d40b3cd226" class="bulleted-list"><li style="list-style-type:disc">Similar a estrutura dos anos 20, porem sem a libra esterlina e apenas o dólar como “moeda base”.</li></ul><ul id="c0fb7696-d219-4aca-8cf6-72dce3555e75" class="bulleted-list"><li style="list-style-type:disc">Revolta de países Europeus e Japão sobre essa politica por conta da continua desvalorização do dólar e de sua obrigação de acumulo da moeda.</li></ul><ul id="3e700cb0-f8c4-4a55-b7e7-57b71a187d69" class="bulleted-list"><li style="list-style-type:disc">Perda de 50% do estoque de ouro dos EUA.</li></ul><p id="dec0396d-5721-410c-937a-eb4d69d26f98" class=""><span style="border-bottom:0.05em solid">1968 - 1917, Declínio de Bretton Woods</span></p><ul id="d84d05c9-290d-4081-88e4-530cc588b798" class="bulleted-list"><li style="list-style-type:disc">O duplo mercado de ouro.</li></ul><ul id="1564030f-f0a1-480b-a0d9-57fb81549572" class="bulleted-list"><li style="list-style-type:disc">Valorização do ouro no mercado paralelo (contra especulações econômicas da escola keynesiana e de Chicago).</li></ul><p id="ff7de138-6acf-4c09-8195-159571c4f58d" class=""><span style="border-bottom:0.05em solid">1971, O fim de Bretton Woods</span></p><ul id="80800b5f-d16c-4a7a-8f40-21f529d0b2ba" class="bulleted-list"><li style="list-style-type:disc">Fim do padrão-ouro: Estados unidos abandonam qualquer relação da moeda com ouro.</li></ul><p id="a0a652c9-f658-4199-a60b-c90a158cf345" class=""><span style="border-bottom:0.05em solid">1971 - 1973, Acordo Smithsoniano</span></p><ul id="9275e7cb-8796-447f-944d-9e0825475a22" class="bulleted-list"><li style="list-style-type:disc">Taxas fixas de cambio sem lastro.</li></ul><ul id="8ee21cb6-4d32-4bf2-b474-9e207f37381c" class="bulleted-list"><li style="list-style-type:disc">Colapso do dólar.</li></ul><p id="762eeae3-e22d-4fbf-9b03-a824cc08f04a" class=""><span style="border-bottom:0.05em solid">1973 - , Moedas flutuantes</span></p><ul id="43373216-16b3-4774-bc59-aa3913bfdb9e" class="bulleted-list"><li style="list-style-type:disc">Guerras econômicas entra países.</li></ul><ul id="b39f95f5-a7ba-4310-b6c5-005210a66ea3" class="bulleted-list"><li style="list-style-type:disc">Maiores períodos inflacionários da historia.</li></ul></details></li></ul><ul id="975f95a0-beff-46a1-93fa-dc79f03ea4dc" class="toggle"><li><details open=""><summary><strong>Pós 1973, por Fernando Ulrich</strong>.</summary><hr id="9ad7648c-0518-48cf-8475-244a27939ad9"/><p id="e40dc6dd-b63c-42e5-9d51-400896a9b628" class=""><span style="border-bottom:0.05em solid">1973 - 2008, Papeis-Moedas Flutuantes</span></p><ul id="7f9c4d42-c9d5-4e87-a1fd-afe61a4c7dbf" class="bulleted-list"><li style="list-style-type:disc">Crises econômicas especulativas, bolhas, etc.</li></ul><ul id="32be8e64-0cc3-4b7f-934a-71b876fcd0d2" class="bulleted-list"><li style="list-style-type:disc">China como um contraponto de produtividade vs politicas inflacionarias mundiais.</li></ul><ul id="d864b18d-c9fe-4787-a385-9264f8aab76f" class="bulleted-list"><li style="list-style-type:disc">2002 - Euro como moeda unica europeia emitida pelo (BCE).</li></ul><ul id="f2531d7b-2307-41bd-9084-70197214b263" class="bulleted-list"><li style="list-style-type:disc">2001 - <em>Boom da internet</em></li></ul><ul id="5f7de820-1b9d-48aa-877d-e3c5ac701680" class="bulleted-list"><li style="list-style-type:disc">2007 - <em>Boom imobiliário</em></li></ul><p id="b6fffac9-cb71-4a79-abc0-c7c1a7beb0c5" class=""><span style="border-bottom:0.05em solid">2008 - , “Presente”</span></p><ul id="6e2b1415-deb9-4ea8-8246-1f715cba3280" class="bulleted-list"><li style="list-style-type:disc">Duplicação da base monetária em semanas.</li></ul><ul id="d6fb6d13-3be9-4eb5-bb2d-a96807b13dec" class="bulleted-list"><li style="list-style-type:disc">Taxas de juros próximas a 0%.</li></ul><ul id="66e34be9-7098-4ae0-89f9-a73257352b0f" class="bulleted-list"><li style="list-style-type:disc">2009 - Crise na Grécia (dividas publicas).</li></ul><ul id="3d63cbbe-d254-4b99-9526-2dad1dbca477" class="bulleted-list"><li style="list-style-type:disc">Era das politicas monetárias não convencionais.</li></ul></details></li></ul></li></ol><ol type="1" id="cf6ccaff-ef95-4738-96bc-df2d08bea839" class="numbered-list" start="4"><li><strong>Problemas</strong><figure class="block-color-yellow_background callout" style="white-space:pre-wrap;display:flex" id="36601e84-23e5-458a-939c-e14c14c74ca8"><div style="font-size:1.5em"><span class="icon">❓</span></div><div style="width:100%">O dinheiro pode ser organizado de acordo com o principio da liberdade?</div></figure><figure class="block-color-yellow_background callout" style="white-space:pre-wrap;display:flex" id="865cfb14-8948-4999-a9fa-de960089f71b"><div style="font-size:1.5em"><span class="icon">❓</span></div><div style="width:100%">Podemos ter um livre mercado na esfera monetária?</div></figure><figure class="block-color-yellow_background callout" style="white-space:pre-wrap;display:flex" id="65840823-4952-4322-b82d-e6c7a7630b81"><div style="font-size:1.5em"><span class="icon">❓</span></div><div style="width:100%">Quais são os efeitos dos vários controles governamentais sobre o dinheiro.</div></figure></li></ol></div></details><details open=""><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">Conteúdo </summary><div class="indented"><hr id="bb89e111-3a69-4c61-9359-010f56fbcb45"/><ol type="1" id="c5429c95-5782-498e-a12d-8f0901988452" class="numbered-list" start="1"><li><strong>Termos</strong><table id="51cda695-3fa7-496d-a810-b0f4ae41bc4c" class="simple-table"><thead class="simple-table-header"><tr id="65cf298a-2b2f-49cf-a00e-a2621c1a7e72"><th id="GIgX" class="simple-table-header-color simple-table-header">Termo</th><th id="ApUA" class="simple-table-header-color simple-table-header">Significado</th></tr></thead><tbody><tr id="5f50bf41-f5cb-469a-9807-730a57b3027e"><td id="GIgX" class="">encaixes</td><td id="ApUA" class="">poupança</td></tr></tbody></table></li></ol><ol type="1" id="45844066-d5c7-4e3e-b75b-c673d5c89bcc" class="numbered-list" start="2"><li><strong>Proposições</strong><figure class="block-color-blue_background callout" style="white-space:pre-wrap;display:flex" id="a2475779-82a0-4061-8725-aacaf45e1520"><div style="font-size:1.5em"><span class="icon">📖</span></div><div style="width:100%">Um bem não pode ser dinheiro se não houver um histórico deste bem como meio de troca.</div></figure><figure class="block-color-blue_background callout" style="white-space:pre-wrap;display:flex" id="a80941f6-8952-413a-8006-c48efecfd73e"><div style="font-size:1.5em"><span class="icon">📖</span></div><div style="width:100%">O dinheiro é uma mercadoria.</div></figure></li></ol><ol type="1" id="ee19e501-6271-4788-bc1f-4ea8b2620b49" class="numbered-list" start="3"><li><strong>Argumentos</strong></li></ol><ol type="1" id="1a26feb7-1363-41f9-8120-84534e25726e" class="numbered-list" start="4"><li><strong>Soluções</strong></li></ol></div></details><details open=""><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0"><strong>Crítica</strong></summary><div class="indented"><hr id="c0b0e0e9-462b-4224-a7fd-9ef62af739cf"/><ol type="1" id="6ff2c08a-6f21-4173-a574-8fe2bbaf41c9" class="numbered-list" start="1"><li><strong>Entendimento</strong><ul id="434d7d83-68ec-4098-9d5f-02ffe8e0ff87" class="to-do-list"><li><div class="checkbox checkbox-off"></div> <span class="to-do-children-unchecked">Sim</span><div class="indented"></div></li></ul><ul id="d1730040-2357-4231-9744-67d839427f0c" class="to-do-list"><li><div class="checkbox checkbox-off"></div> <span class="to-do-children-unchecked">Quase Tudo</span><div class="indented"></div></li></ul><ul id="9c161b6f-d578-42b3-a609-9bf4524880a1" class="to-do-list"><li><div class="checkbox checkbox-off"></div> <span class="to-do-children-unchecked">Partes</span><div class="indented"></div></li></ul><ul id="f6b0b8f2-2b3b-4500-a64f-83c69f1437d0" class="to-do-list"><li><div class="checkbox checkbox-off"></div> <span class="to-do-children-unchecked">Não</span><div class="indented"></div></li></ul><ul id="2d2320ef-99b9-402f-8962-f36c8455fc96" class="to-do-list"><li><div class="checkbox checkbox-off"></div> <span class="to-do-children-unchecked"></span><div class="indented"></div></li></ul></li></ol><ol type="1" id="0ea743d1-c6e1-40c4-ab54-60af0e1a737e" class="numbered-list" start="2"><li><strong>Justificativas</strong><ol type="a" id="82a8c925-349d-45c2-a298-31a92d18349d" class="numbered-list" start="1"><li><strong>Argumentos desinformados</strong></li></ol><ol type="a" id="a7005472-2a9a-45ed-bb96-0249e123426e" class="numbered-list" start="2"><li><strong>Argumentos mal informados</strong></li></ol><ol type="a" id="09812042-4ae3-40a1-9a1f-4d52bf557faa" class="numbered-list" start="3"><li><strong>Argumentos ilógicos</strong></li></ol><ol type="a" id="64e803c0-f654-45cb-8230-7ad933a31718" class="numbered-list" start="4"><li><strong>Argumentos incompletos</strong></li></ol></li></ol></div></details><details open=""><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">Dúvidas</summary><div class="indented"><hr id="06989860-472c-447c-a6f5-d76a4f6eb729"/><ol type="1" id="6d98abde-84fb-400d-9c49-b889a7988a40" class="numbered-list" start="1"><li>A mineração não opera como uma inflação (maior oferta de moeda na economia)? E se sim, qual o problema de um aumento nominal? Talvez pela taxa com que isso ocorre, diferente da mineração, a impressão de papel pode ser feita de maneira infinita?</li></ol><p id="56a4d936-f2dc-4605-889e-3aeaaa37a808" class="">
+</p><p id="13a9a270-a672-412d-bd9d-bfdc60b648af" class=""><div class="indented"><p id="972f3456-5a7e-4959-b6db-ccca5137275a" class="">
+</p></div></p></div></details></div></details><p id="3b052155-bf9a-4d14-a24e-8457aa1ece79" class="">
+</p><p id="03fe323e-0943-43d9-b5dc-d954d9735c72" class="">
+</p></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>

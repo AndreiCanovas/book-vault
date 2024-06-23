@@ -1,0 +1,685 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Os Erros Fatais do Socialismo</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+    margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-uiBlue { background-color: rgba(35, 131, 226, .07); }
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-transparentGray { background-color: rgba(227, 226, 224, 0); }
+.select-value-color-translucentGray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+.select-value-color-pageGlass { background-color: undefined; }
+.select-value-color-washGlass { background-color: undefined; }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="03550866-b0c0-4b33-ae7c-f04d496d6274" class="page sans"><header><h1 class="page-title">Os Erros Fatais do Socialismo</h1><p class="page-description"></p><table class="properties"><tbody><tr class="property-row property-row-date"><th><span class="icon property-icon"><svg role="graphics-symbol" viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0" class="typesDate"><path d="M3.29688 14.4561H12.7031C14.1797 14.4561 14.9453 13.6904 14.9453 12.2344V3.91504C14.9453 2.45215 14.1797 1.69336 12.7031 1.69336H3.29688C1.82031 1.69336 1.05469 2.45215 1.05469 3.91504V12.2344C1.05469 13.6973 1.82031 14.4561 3.29688 14.4561ZM3.27637 13.1162C2.70898 13.1162 2.39453 12.8154 2.39453 12.2207V5.9043C2.39453 5.30273 2.70898 5.00879 3.27637 5.00879H12.71C13.2842 5.00879 13.6055 5.30273 13.6055 5.9043V12.2207C13.6055 12.8154 13.2842 13.1162 12.71 13.1162H3.27637ZM6.68066 7.38086H7.08398C7.33008 7.38086 7.41211 7.30566 7.41211 7.05957V6.66309C7.41211 6.41699 7.33008 6.3418 7.08398 6.3418H6.68066C6.44141 6.3418 6.35938 6.41699 6.35938 6.66309V7.05957C6.35938 7.30566 6.44141 7.38086 6.68066 7.38086ZM8.92285 7.38086H9.31934C9.56543 7.38086 9.64746 7.30566 9.64746 7.05957V6.66309C9.64746 6.41699 9.56543 6.3418 9.31934 6.3418H8.92285C8.67676 6.3418 8.59473 6.41699 8.59473 6.66309V7.05957C8.59473 7.30566 8.67676 7.38086 8.92285 7.38086ZM11.1582 7.38086H11.5547C11.8008 7.38086 11.8828 7.30566 11.8828 7.05957V6.66309C11.8828 6.41699 11.8008 6.3418 11.5547 6.3418H11.1582C10.9121 6.3418 10.8301 6.41699 10.8301 6.66309V7.05957C10.8301 7.30566 10.9121 7.38086 11.1582 7.38086ZM4.44531 9.58203H4.84863C5.09473 9.58203 5.17676 9.50684 5.17676 9.26074V8.86426C5.17676 8.61816 5.09473 8.54297 4.84863 8.54297H4.44531C4.20605 8.54297 4.12402 8.61816 4.12402 8.86426V9.26074C4.12402 9.50684 4.20605 9.58203 4.44531 9.58203ZM6.68066 9.58203H7.08398C7.33008 9.58203 7.41211 9.50684 7.41211 9.26074V8.86426C7.41211 8.61816 7.33008 8.54297 7.08398 8.54297H6.68066C6.44141 8.54297 6.35938 8.61816 6.35938 8.86426V9.26074C6.35938 9.50684 6.44141 9.58203 6.68066 9.58203ZM8.92285 9.58203H9.31934C9.56543 9.58203 9.64746 9.50684 9.64746 9.26074V8.86426C9.64746 8.61816 9.56543 8.54297 9.31934 8.54297H8.92285C8.67676 8.54297 8.59473 8.61816 8.59473 8.86426V9.26074C8.59473 9.50684 8.67676 9.58203 8.92285 9.58203ZM11.1582 9.58203H11.5547C11.8008 9.58203 11.8828 9.50684 11.8828 9.26074V8.86426C11.8828 8.61816 11.8008 8.54297 11.5547 8.54297H11.1582C10.9121 8.54297 10.8301 8.61816 10.8301 8.86426V9.26074C10.8301 9.50684 10.9121 9.58203 11.1582 9.58203ZM4.44531 11.7832H4.84863C5.09473 11.7832 5.17676 11.708 5.17676 11.4619V11.0654C5.17676 10.8193 5.09473 10.7441 4.84863 10.7441H4.44531C4.20605 10.7441 4.12402 10.8193 4.12402 11.0654V11.4619C4.12402 11.708 4.20605 11.7832 4.44531 11.7832ZM6.68066 11.7832H7.08398C7.33008 11.7832 7.41211 11.708 7.41211 11.4619V11.0654C7.41211 10.8193 7.33008 10.7441 7.08398 10.7441H6.68066C6.44141 10.7441 6.35938 10.8193 6.35938 11.0654V11.4619C6.35938 11.708 6.44141 11.7832 6.68066 11.7832ZM8.92285 11.7832H9.31934C9.56543 11.7832 9.64746 11.708 9.64746 11.4619V11.0654C9.64746 10.8193 9.56543 10.7441 9.31934 10.7441H8.92285C8.67676 10.7441 8.59473 10.8193 8.59473 11.0654V11.4619C8.59473 11.708 8.67676 11.7832 8.92285 11.7832Z"></path></svg></span>Started At</th><td><time>@08/08/2023 → 26/08/2023</time></td></tr><tr class="property-row property-row-select"><th><span class="icon property-icon"><img src="https://www.notion.so/icons/bookmark_gray.svg" style="width:14px;height:14px"/></span>Status</th><td><span class="selected-value select-value-color-default">Finished</span></td></tr><tr class="property-row property-row-multi_select"><th><span class="icon property-icon"><svg role="graphics-symbol" viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0" class="typesMultipleSelect"><path d="M1.91602 4.83789C2.44238 4.83789 2.87305 4.40723 2.87305 3.87402C2.87305 3.34766 2.44238 2.91699 1.91602 2.91699C1.38281 2.91699 0.952148 3.34766 0.952148 3.87402C0.952148 4.40723 1.38281 4.83789 1.91602 4.83789ZM5.1084 4.52344H14.3984C14.7607 4.52344 15.0479 4.23633 15.0479 3.87402C15.0479 3.51172 14.7607 3.22461 14.3984 3.22461H5.1084C4.74609 3.22461 4.45898 3.51172 4.45898 3.87402C4.45898 4.23633 4.74609 4.52344 5.1084 4.52344ZM1.91602 9.03516C2.44238 9.03516 2.87305 8.60449 2.87305 8.07129C2.87305 7.54492 2.44238 7.11426 1.91602 7.11426C1.38281 7.11426 0.952148 7.54492 0.952148 8.07129C0.952148 8.60449 1.38281 9.03516 1.91602 9.03516ZM5.1084 8.7207H14.3984C14.7607 8.7207 15.0479 8.43359 15.0479 8.07129C15.0479 7.70898 14.7607 7.42188 14.3984 7.42188H5.1084C4.74609 7.42188 4.45898 7.70898 4.45898 8.07129C4.45898 8.43359 4.74609 8.7207 5.1084 8.7207ZM1.91602 13.2324C2.44238 13.2324 2.87305 12.8018 2.87305 12.2686C2.87305 11.7422 2.44238 11.3115 1.91602 11.3115C1.38281 11.3115 0.952148 11.7422 0.952148 12.2686C0.952148 12.8018 1.38281 13.2324 1.91602 13.2324ZM5.1084 12.918H14.3984C14.7607 12.918 15.0479 12.6309 15.0479 12.2686C15.0479 11.9062 14.7607 11.6191 14.3984 11.6191H5.1084C4.74609 11.6191 4.45898 11.9062 4.45898 12.2686C4.45898 12.6309 4.74609 12.918 5.1084 12.918Z"></path></svg></span>Tags</th><td><span class="selected-value select-value-color-gray">Economia</span><span class="selected-value select-value-color-blue">Filosofia</span></td></tr><tr class="property-row property-row-select"><th><span class="icon property-icon"><img src="https://www.notion.so/icons/kind_gray.svg" style="width:14px;height:14px"/></span>Type</th><td><span class="selected-value select-value-color-blue">Expositivo</span></td></tr><tr class="property-row property-row-select"><th><span class="icon property-icon"><img src="https://www.notion.so/icons/hashtag_gray.svg" style="width:14px;height:14px"/></span>Year</th><td><span class="selected-value">2023</span></td></tr><tr class="property-row property-row-multi_select"><th><span class="icon property-icon"><img src="https://www.notion.so/icons/user_gray.svg" style="width:14px;height:14px"/></span>Author</th><td><span class="selected-value select-value-color-gray">Friedrich August von Hayek</span></td></tr><tr class="property-row property-row-number"><th><span class="icon property-icon"><svg role="graphics-symbol" viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0" class="typesNumber"><path d="M2.4834 10.9902H4.33594L3.75488 13.8887C3.74121 13.9639 3.72754 14.0664 3.72754 14.1416C3.72754 14.5381 3.99414 14.7637 4.39746 14.7637C4.81445 14.7637 5.09473 14.5449 5.18359 14.1143L5.80566 10.9902H8.79297L8.21191 13.8887C8.19824 13.9639 8.18457 14.0664 8.18457 14.1416C8.18457 14.5381 8.45117 14.7637 8.85449 14.7637C9.27148 14.7637 9.55176 14.5449 9.63379 14.1143L10.2627 10.9902H12.4502C12.9287 10.9902 13.2432 10.6758 13.2432 10.2109C13.2432 9.8418 12.9902 9.56836 12.6006 9.56836H10.5498L11.2129 6.28711H13.3662C13.8379 6.28711 14.1523 5.96582 14.1523 5.50098C14.1523 5.13184 13.9062 4.8584 13.5098 4.8584H11.5L12.0195 2.27441C12.0264 2.21973 12.0469 2.11035 12.0469 2.01465C12.0469 1.625 11.7666 1.39258 11.3633 1.39258C10.9053 1.39258 10.6797 1.63867 10.5977 2.05566L10.0303 4.8584H7.04297L7.5625 2.27441C7.57617 2.21973 7.58984 2.11035 7.58984 2.01465C7.58984 1.625 7.30957 1.39258 6.91309 1.39258C6.44824 1.39258 6.21582 1.63867 6.13379 2.05566L5.57324 4.8584H3.54297C3.06445 4.8584 2.75 5.18652 2.75 5.65137C2.75 6.03418 3.00293 6.28711 3.39258 6.28711H5.28613L4.62305 9.56836H2.63379C2.15527 9.56836 1.84082 9.89648 1.84082 10.3613C1.84082 10.7373 2.09375 10.9902 2.4834 10.9902ZM6.09277 9.56836L6.75586 6.28711H9.74316L9.08008 9.56836H6.09277Z"></path></svg></span>Pages</th><td>237</td></tr><tr class="property-row property-row-number"><th><span class="icon property-icon"><img src="https://www.notion.so/icons/calendar-day_gray.svg" style="width:14px;height:14px"/></span>From</th><td>1988</td></tr><tr class="property-row property-row-formula"><th><span class="icon property-icon"><img src="https://www.notion.so/icons/eject_gray.svg" style="width:14px;height:14px"/></span>Rank</th><td>3</td></tr></tbody></table></header><div class="page-body"><details open=""><summary style="font-weight:600;font-size:1.875em;line-height:1.3;margin:0">Analítico</summary><div class="indented"><hr id="8164c0b2-52f7-45c9-8198-11fc09df7bda"/><details open=""><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">Estrutura</summary><div class="indented"><hr id="b8ae7e83-0b26-4f04-b4c5-8d0cf89f693d"/><ol type="1" id="bf14df39-64b6-4dd2-9999-685ca90f29be" class="numbered-list" start="1"><li><strong>Tipo</strong></li></ol><ol type="1" id="6a7ee5b3-aa80-48ec-a77f-4a73c2cb96c7" class="numbered-list" start="2"><li><strong>Unidade</strong><p id="1fd84e60-1e06-4097-b20b-f76f89a37954" class="">Argumentos entre o capitalismo (definido como uma organização espontânea) e a tentativa ingenua de um socialismo planejado. Ingenua pois segundo o autor o principal erro é acreditar que por termos gerado uma instituição econômica teríamos o poder para planejar racionalmente uma organização econômica e moral ainda melhor. O que sera factualmente demonstrado como impossível.</p><p id="e56617c1-5ef2-440a-8a8d-aabb5bbd36dd" class="block-color-gray_background"><strong>  Obs.</strong></p><ul id="bc8a8c86-7f3b-4a24-9cb4-469076d43131" class="bulleted-list"><li style="list-style-type:disc">O sistema moral é resultante de uma ética evolutiva (tradição) assim como outras instituições (ex: linguagem, dinheiro, etc.).</li></ul><ul id="c624498a-985f-4a93-b277-ecd2f633ce4a" class="bulleted-list"><li style="list-style-type:disc">O autor parece ter uma visão utilitarista do capitalismo (evolução cultural do comercio e propriedade privada por ser o meio mais eficiente de desenvolvimento social).</li></ul><ul id="36e9dea5-636f-46d7-ba18-91304fc60705" class="bulleted-list"><li style="list-style-type:disc">Talvez ele coloque a moral orgânica superior a moral racional socialista e tenta entender de onde esta moral surge (processos evolutivos e não de uma moral crista, por exemplo).</li></ul></li></ol><ol type="1" id="142fa44b-ec7b-487d-ac10-39a3e27096c5" class="numbered-list" start="3"><li><strong>Ordenação</strong><ul id="c2ab2d01-5539-4196-8e84-6a22064b1bba" class="toggle"><li><details open=""><summary><strong>Ordem humana instintiva (evolutiva) e a razão (cultural)</strong></summary><hr id="d71664aa-2c5e-46d5-91a3-1839dddf8bac"/><p id="507eda02-e2ae-4bc0-b439-2c3ac87659fe" class="">Antes com objetivos comuns de sobrevivência a moralidade poderia ser instintiva mas depois passa a ser controladora (proibições dos instintos). Mas ao mesmo tempo tais costumes restringem comportamentos e portanto as pessoas tendem, mesmo seguindo-os, não gostarem deles, por não entendem suas origens.</p><ul id="506bdc00-7034-4acf-b854-9460b3c92079" class="bulleted-list"><li style="list-style-type:disc">Os indivíduos evoluirão a partir da cooperação sobre objetivos comuns (moralidade natural).</li></ul><ul id="5b2239cd-fdbd-41c7-a678-e6a30ea3a77c" class="bulleted-list"><li style="list-style-type:disc">As interações humanas não funcionam por conta de uma ordem convencionada ou planejada e sim pela evolução das regras de conduta transmitidas através da tradição, ensino e imitação (moralidade).</li></ul><ul id="97a57132-2b2e-4e9d-bd0c-720a8ca1a960" class="bulleted-list"><li style="list-style-type:disc">A evolução biológica nos permitiu desenvolver meios de aprimorar a cultura, através de meios de passar a informação, como ensino, imitação, etc..</li></ul><p id="cf84cf2a-034f-4ace-ac5c-7e6bc438436e" class="">Instintos (genéticos/sobrevivência) &gt; cultura, tradição e costumes (imitação/desenvolvimento) &gt; razão. </p><p id="f98cdd43-e6df-4b88-a611-bc3473e5c3b1" class="block-color-gray_background"><strong>  Observações</strong></p><figure class="block-color-blue_background callout" style="white-space:pre-wrap;display:flex" id="e051fbd1-216a-4d05-80b7-2620ad0a020d"><div style="font-size:1.5em"><span class="icon">📖</span></div><div style="width:100%"><strong>[pág. 29]</strong> A tradição coletivista se baseia na busca pela “moral natural” instintiva. </div></figure><figure class="block-color-blue_background callout" style="white-space:pre-wrap;display:flex" id="8446f179-64ae-433b-9dbc-2ac57803c47b"><div style="font-size:1.5em"><span class="icon">📖</span></div><div style="width:100%">A moral se desenvolve por costumes, com base num critério evolutivo, buscando maximizar a sobrevivência e proliferação da especie.</div></figure></details></li></ul><ul id="98ab0290-aed6-47c0-8043-aa5726b8b83b" class="toggle"><li><details open=""><summary><strong>Origens - Liberdade, Propriedade e Justiça.</strong></summary><hr id="32a91bf8-114c-4623-aae5-14fdcf331829"/><p id="d3a3c2bd-6a3e-4e50-982e-ee1dd8c30ac8" class="">A propriedade privada é o pilar do desenvolvimento civilizatório portanto aquele que o comportamento aprendido durante uma  evolução cultural. Simultaneamente a esse são desenvolvidas tradições que “mantem” esta moral, como a justiça (direito a não-violação da propriedade) e a livre iniciativa de trocas e compromissos (escolha do proprietário de transferir seus bens a outra pessoa).</p><ul id="a5cc2726-280b-43f5-a847-ce36e95fbe2d" class="bulleted-list"><li style="list-style-type:disc">porem seu formato ainda esta em constante evolução, como por exemplo as formas de propriedade autoral e patentes.</li></ul></details></li></ul><ul id="1ae87291-b671-4bb8-8a5e-963c215a47b5" class="toggle"><li><details open=""><summary><strong>Evolução do Mercado: Comercio e Civilização</strong> </summary><hr id="099f065d-4573-4ea4-830a-430f4a51ca28"/><ul id="c4cc3d02-2682-4842-bfb1-d58ede6516d2" class="bulleted-list"><li style="list-style-type:disc">A utilização do comercio em períodos primitivos da civilização como meio para atendimento de necessidades.</li></ul><ul id="91fa4e24-b838-46fe-b7d5-d970d10ddc62" class="bulleted-list"><li style="list-style-type:disc">Pode estar atrelada também ao crescimento populacional desses povos (permitiu o assentamento da especialização).</li></ul><ul id="80d9b07e-e871-4c61-bb70-5e9b0a78f2b9" class="bulleted-list"><li style="list-style-type:disc">Troca do comportamento comunitário para o individual (levavam produtos da comunidade para fora, cujos beneficiários passam a ser “estrangeiros” e não os próprios membros daquele cosmo).</li></ul><p id="a7a5b0d7-5056-4576-a79d-5025c1d28f2b" class="">Pensamento contra a ordem natural (base Aristotélica-Aquino):</p><ul id="3aca6f99-0c7a-4be2-87f6-14fc6cf469db" class="bulleted-list"><li style="list-style-type:disc">Entendimento de uma ética estática, sem evolução, portanto toda organização econômica é deliberadamente planejada.</li></ul><ul id="1218a30f-158a-4c5f-bfcb-e8084ea247a4" class="bulleted-list"><li style="list-style-type:disc">Fundamentam os conceitos da economia socialista (desconsideram a ordem orgânica e impõe uma ordem planejada).</li></ul><p id="7c4028e2-c600-42a7-86f2-e5178f818430" class="block-color-gray_background"><strong>  Observações</strong></p></details></li></ul><ul id="7dc7265e-257e-40a7-9d24-a0028fda9d34" class="toggle"><li><details open=""><summary><strong>O Argumento Cientificista/Construtivista</strong></summary><hr id="a128343a-23bb-4794-8a5b-73a9aad3232e"/><p id="ed085852-9b43-4a5e-bb82-48b82576d243" class="">Racionalismo como a tentativa de organizar uma estrutura macro-econômica com relações matemáticas. Incitando a ma-alocação e voltando as pessoas aos instintos primitivos (por ex: tomar bens coercitivamente para satisfação de suas necessidades).</p><p id="ac0f3419-e339-4a25-bfbd-713cf6714782" class="">Exemplos:</p><ul id="922e2378-7977-4308-9f4a-35e7c44326a0" class="bulleted-list"><li style="list-style-type:disc">França seculos XVII e XVIII com o pensamento construtivista/cientificista lança objeções a ordem espontânea do comercio.</li></ul><ul id="95012578-0480-4793-a5ba-29bb42b6071a" class="bulleted-list"><li style="list-style-type:disc">René Descartes</li></ul><ul id="bfafcd45-a6ee-4bb4-b2fe-1bb1b2a9d665" class="bulleted-list"><li style="list-style-type:disc">Jean Jacques Rousseau:<mark class="highlight-gray"> Muda o sentido de “liberdade” para um conceito instintivo de isenção das restrições/regras. “A Vontade Geral”.</mark></li></ul><ul id="8ff7e59a-d88d-4327-b3da-ae068dcde36d" class="bulleted-list"><li style="list-style-type:disc">Auguste Comte: <mark class="highlight-gray">“Ética demonstrada” sobre a “Ética revelada”.</mark></li></ul><ul id="847e7aff-0ecf-4c42-bb01-47c31a3ffecd" class="bulleted-list"><li style="list-style-type:disc">John Maynard Keynes: <mark class="highlight-gray">Teoria geral da economia, acoes de curto prazo. Contra a poupança, etc.</mark></li></ul><ul id="8d0003ee-28e0-4b2c-b31f-bd54b8ccf03a" class="bulleted-list"><li style="list-style-type:disc">Albert Einstein: <mark class="highlight-gray">Produção para o uso ao invés da produção para o lucro.</mark></li></ul><p id="1a22775d-27c6-4b9e-831f-bd0ea35d5422" class="">O Racionalismo traz uma percepção de ser uma abordagem mais “logica/inteligente” com “lastro cientifico” (acreditando que a metodologia cientifica por ter sucesso em outras áreas do conhecimento seria aplicável, sendo a melhor opção para explicar fenômenos econômicos, o conhecimento cultural acumulado não é uma justificativa).</p><p id="4ae9443a-e409-409e-8e4e-1b561eda98ed" class="">Cientificismo/Construtivismo:</p><ul id="64e44c07-04c1-4e2e-bae2-25441c5ba4c6" class="bulleted-list"><li style="list-style-type:disc">Racionalismo, empirismo, positivismo e utilitarismo <mark class="highlight-gray">(noma moralidade do socialismo)</mark>.</li></ul><p id="121b0854-4d5a-4bad-b6b8-27f271fc2eb8" class="block-color-gray_background"><strong>  Observações</strong></p><figure class="block-color-blue_background callout" style="white-space:pre-wrap;display:flex" id="3c84f3db-9d8e-48e1-a023-1e65083e4f61"><div style="font-size:1.5em"><span class="icon">📖</span></div><div style="width:100%">O ser humano se torna uma barra inanimada de carbono. </div></figure><figure class="block-color-blue_background callout" style="white-space:pre-wrap;display:flex" id="26e05d6e-cec4-48ee-b004-9cdb785d6f62"><div style="font-size:1.5em"><span class="icon">📖</span></div><div style="width:100%">Nenhum racionalista parece considerar que a razão possa ter limites e que podemos não ter capacidade para planejar o que estamos propondo planejar. Nem que encontrar esses limites é uma tarefa talvez mais imediata que o planejamento proposto. E nem a curiosidade para “racionalizar” a origem da ordem espontânea.</div></figure></details></li></ul><ul id="b00140f3-16e8-4b19-97b9-45887cdb3e41" class="toggle"><li><details open=""><summary><strong>Racionalismo vs Evolução cultura da moral.</strong></summary><hr id="2c044ac5-81b7-48f7-80c1-a98a66f32882"/><p id="6869eadd-f2ea-44a1-8f9d-74e9f7e3d8fd" class="">A argumentação de que a tradição moral não satisfaz os requisitos racionais, trata-se de uma moral “dogmática” e “alienante”.</p><p id="2dbb7698-9999-4322-96e4-a55ee04c0ccb" class="">Porém se a justificativa racional é necessária, o racionalismo também a rigor não consegue demonstrar essas justificativas. Ate a causa final da própria demonstração se torda infundada, por ex. como justificar que a causa final do desenvolvimento da civilização é balizada pela felicidade?</p><p id="c81ddc8c-4767-4c1b-bb9f-42266d8cd6f3" class="">Ao contrario entender a evolução cultural, o por que estas praticas foram as que se estabeleceram nos ajudaria a entender as necessidades a que elas servem e em que conjectura esse arcabouço moral foi criado.</p><ul id="77e335b5-fc6e-4bd4-bc6c-8ed9337218cb" class="bulleted-list"><li style="list-style-type:disc">Só é possível ordenar o desconhecido fazendo com que ele ordene a si mesmo.</li></ul><p id="589aa24b-238a-4acf-9caf-7e686d4d0363" class="block-color-gray_background"><strong>  Quotes</strong></p><blockquote id="642878a7-adf9-4dec-9631-2dee1127994e" class="block-color-yellow_background"><em>“[…] toda a estrutura de atividades tende a se adaptar , por meio desses sinais parciais e fragmentários, e condições que nenhum individuo preve nem conhece.”</em></blockquote><blockquote id="c54b4f9c-71b3-4c4f-b585-b6bb1622f009" class="block-color-teal_background"><em>“[…] a curiosa tarefa da economia é demonstrar aos homens que na verdade eles não sabem quase nada a respeito do que imaginam poder planejar.”</em></blockquote><p id="70f763de-439f-40a7-b75f-14c6de939013" class="block-color-gray_background"><strong>  Observações</strong></p><figure class="block-color-blue_background callout" style="white-space:pre-wrap;display:flex" id="40b96d63-6473-4dfa-b580-100fbf520935"><div style="font-size:1.5em"><span class="icon">📖</span></div><div style="width:100%">Se o conhecimento e a informação estão dispersos, o poder de decisão tem de estar disperso (propriedade privada), para que o conhecimento possa ser utilizado.</div></figure><figure class="block-color-blue_background callout" style="white-space:pre-wrap;display:flex" id="659bfe65-7895-47a1-8770-8181c4e49b63"><div style="font-size:1.5em"><span class="icon">📖</span></div><div style="width:100%">Altruísmo e solidariedade a principio parecem ser benéficos, porem feitos de maneira sistemática acabam empobrecendo as pessoas, uma vez que seguir a ordem ampliada é mais eficiente, embora não perceptível. Isso não exclui o fato de que <strong>localmente</strong> não possamos ser solidários com nossos ganhos excedentes.</div></figure></details></li></ul><ul id="fea7cbde-5262-4fa6-89ca-85ba9cba3f74" class="toggle"><li><details open=""><summary><strong>Comercio e Dinheiro</strong></summary><hr id="0334be34-50ea-4a70-b3a5-6ea3a1bca4ad"/><ul id="eff9278e-bff0-415d-acd4-4475df6f4a3e" class="bulleted-list"><li style="list-style-type:disc">Confidencialidade (por ex: das fontes de oportunidade) garante diferenciação e competitividade, ao mesmo tempo que mantem o mercado vivo é visto com maus olhos por outras pessoas, pois sem entender a funcionalidade acreditam ser uma pratica reprovável (comprar barato para vender caro).</li></ul><ul id="3a8d123c-a71e-42cc-a999-78f24d84e125" class="bulleted-list"><li style="list-style-type:disc">Os comerciantes eram vistos marginalmente, pois sua atividade era misteriosa, algo intangível para as praticas perceptíveis do dia-a-dia (por exemplo o mérito de atividades que envolvem trabalho físico vs conhecimento), “a mudança de valor dos bens”, a proximidade com culturas estrangeiras, etc.</li></ul><ul id="5e475f77-6e36-4f75-b98c-2268a17c543e" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-default">Preço sempre variável, pois depende e é:</mark><mark class="highlight-gray"> Relação entre a hierarquia de fins (distinto entre indivíduos) e hierarquia dos recursos escassos que competem para esses fins (recursos atendem a diferentes fins e os fins também podem ser atendidos por diferentes recursos).</mark></li></ul><p id="911cab2f-c688-4749-ab72-b0072294f361" class="block-color-gray_background"><strong>  Quotes</strong></p><blockquote id="ccfe7634-f8e8-4cbd-8799-76e1488b5a74" class="block-color-yellow_background"><em>“[…] .”</em></blockquote><p id="d85ceab6-b369-447f-8858-078a46d1b6ed" class="block-color-gray_background"><strong>  Observações</strong></p><figure class="block-color-blue_background callout" style="white-space:pre-wrap;display:flex" id="5c7b2916-c94e-428e-8049-a8ed348864cf"><div style="font-size:1.5em"><span class="icon">📖</span></div><div style="width:100%">Mercado (pessoas atuantes nas trocas) tem a função de transmitir a informação de valor da escassez relativa de bens de uma determinada localidade.</div></figure><figure class="block-color-blue_background callout" style="white-space:pre-wrap;display:flex" id="024ad6a7-c870-480b-8864-6e60c35bc311"><div style="font-size:1.5em"><span class="icon">📖</span></div><div style="width:100%">O aumento de valor dos bens é algo inexplicado por modelos econômicos materialistas (a não ser por teorias de exploração, etc.).</div></figure></details></li></ul><ul id="6e39267e-3804-46b7-9847-1a5658a69b69" class="toggle"><li><details open=""><summary><strong>Conflitos de linguagem (Grupo primitivo vs Ordem ampliada)</strong></summary><hr id="4fe94afa-9577-4850-9502-cb4f00140a2e"/><ul id="347d2856-ab46-46ff-92d1-2f98dc881b15" class="bulleted-list"><li style="list-style-type:disc">A linguagem nos leva a crer que as instituições orgânicas são “dotadas de vontade” e por tanto exercem acoes, preferencias e etc. (Como “sociedade”, “estado”, “mercado”). Nos levando a entender erroneamente o comportamento macro, esquecendo que decisões individuais e pessoais são o que definem essas estruturas.</li></ul><ul id="ec272dae-a36f-4893-bd77-4e62aa104e91" class="bulleted-list"><li style="list-style-type:disc">Troca de termos para induzir melhores interpretações (estado algo — autoritário por sociedade — mais brando, somos nos) ou desqualificar outras (como chamar a organizacao ampliada de capitalismo — sugerindo segregação de classes, economia de mercado — sugerindo uma economia a um processo impessoal).</li></ul></details></li></ul><ul id="9b1373f5-3adb-42a4-a3e2-571c04648c6b" class="toggle"><li><details open=""><summary><strong>Crescimento Populacional</strong></summary><hr id="fd7c473d-b382-4c20-a619-e5096836d5db"/><p id="509bb99a-6fcc-4ded-bafc-7f4802489e20" class="">A errônea suposição do perigo do crescimento populacional (impactado principalmente pela ordem do mercado que acelera o desenvolvimento das civilizações), pela falta de recursos para uma população tao numerosa. Isso por que maior população leva a possibilidades ainda maiores de especialização e divisão do trabalho, aumentando a produtividade. E não como Malthus propôs — um decaimento da utilidade marginal do trabalhador homogêneo.</p><ul id="bd70c18c-056e-4a38-ac48-580f4aaa9580" class="bulleted-list"><li style="list-style-type:disc">Um risco são crescimentos populacionais subsidiados, pois tais populações sem tais subsídios futuros não teriam recurso para manter tal população artificialmente aumentada.</li></ul><p id="c5cb7d44-7cdb-4653-ac17-40d885f12e6b" class="">Infância prolongada / aprendizado &gt;  diferenciação/especialização &gt; aumento da produtividade &gt; aumento da população &gt; maior diferenciação/especialização, etc.</p></details></li></ul><ul id="9c7a46ac-68ae-4ca5-a99e-411e9e37f162" class="toggle"><li><details open=""><summary><strong>Religião - Primeiro meio de manter as tradições</strong></summary><hr id="974684ad-06bd-4146-811d-34c92688ffad"/><p id="b6353871-0a44-4c8b-a0a9-ddc3fe95dcda" class="">As tradições aprendidas são melhores culturas que possibilitaram as pessoas se desenvolverem e prosperarem, porem são comportamentos contrários aos instintos primitivos. Assim a religião entra nos primeiros momentos com o papel induzir quais comportamentos devem ser mantidos, utilizando para isso incentivos misticos.</p><p id="2f61e842-14bd-4b1e-80a1-b2072d9d767d" class="block-color-gray_background"><strong>  Observações</strong></p><figure class="block-color-blue_background callout" style="white-space:pre-wrap;display:flex" id="86bcf517-7ed8-49ee-bcff-72f871b4d2ad"><div style="font-size:1.5em"><span class="icon">📖</span></div><div style="width:100%">Ainda me parece pouco provável como a religião conseguiria manter apenas os comportamentos moralmente aceitáveis sem um plano a priore</div></figure></details></li></ul></li></ol><ol type="1" id="453410c1-466f-4379-b9a0-91085cf8ac1c" class="numbered-list" start="4"><li><strong>Problemas</strong><figure class="block-color-yellow_background callout" style="white-space:pre-wrap;display:flex" id="2cd9fb7e-8017-4033-a188-648512905269"><div style="font-size:1.5em"><span class="icon">❗</span></div><div style="width:100%">Refuta do socialismo, pois apresenta um perigo para a integridade humana</div></figure><figure class="block-color-yellow_background callout" style="white-space:pre-wrap;display:flex" id="e5120e04-303d-4650-99af-9b0b95f6feb5"><div style="font-size:1.5em"><span class="icon">❗</span></div><div style="width:100%">Como emerge a nossa moralidade e que implicações seu modo de tomar forma podem ter para nossa vida econômica e politica?</div></figure></li></ol></div></details><details open=""><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">Conteúdo </summary><div class="indented"><hr id="a7572dfd-b796-435e-8648-c05254150c2c"/><ol type="1" id="9460b651-30ea-47bc-a769-7eb5ef6da97a" class="numbered-list" start="1"><li><strong>Termos</strong><table id="aada5556-8f10-41ee-ae99-594acc7e96a7" class="simple-table"><thead class="simple-table-header"><tr id="4ed33e85-f4fd-413d-9ebd-270f4b61cf18"><th id="GIgX" class="simple-table-header-color simple-table-header" style="width:259.53692626953125px">Termo</th><th id="ApUA" class="simple-table-header-color simple-table-header" style="width:532.5369262695312px">Significado</th></tr></thead><tbody><tr id="a188a631-8bf8-49f4-98e2-b73ac3fb66ac"><td id="GIgX" class="" style="width:259.53692626953125px">capitalismo</td><td id="ApUA" class="" style="width:532.5369262695312px">ordem ampliada (espontânea) da cooperação humana.</td></tr><tr id="a8824145-a2d1-4b3a-a078-0707966aabb3"><td id="GIgX" class="" style="width:259.53692626953125px">moralidade</td><td id="ApUA" class="" style="width:532.5369262695312px">regras de conduta evolutivas</td></tr><tr id="5887a573-24d0-4d62-9142-230a746ef5c9"><td id="GIgX" class="" style="width:259.53692626953125px">moralidade natural</td><td id="ApUA" class="" style="width:532.5369262695312px">instintos de cooperação</td></tr><tr id="e55af939-82b8-4ba2-9ef7-30a583dc6c46"><td id="GIgX" class="" style="width:259.53692626953125px">Racionalismo</td><td id="ApUA" class="" style="width:532.5369262695312px">apenas raciocínios dedutivo e indutivo são validos.</td></tr><tr id="966197bd-db82-49cd-b739-96a33868e179"><td id="GIgX" class="" style="width:259.53692626953125px">Empirismo</td><td id="ApUA" class="" style="width:532.5369262695312px">O conhecimento só pode ser justificado experimentalmente.</td></tr><tr id="939712a6-a04a-4a68-ab4e-a3d4492f0f60"><td id="GIgX" class="" style="width:259.53692626953125px">Positivismo</td><td id="ApUA" class="" style="width:532.5369262695312px">Todo conhecimento verdadeiro é cientifico.</td></tr><tr id="3c127f4a-6df9-4596-ae5a-ed283c02f4a1"><td id="GIgX" class="" style="width:259.53692626953125px">Utilitarismo</td><td id="ApUA" class="" style="width:532.5369262695312px">Apenas o prazer e a dor são critérios de avaliar o sucesso de uma ação.</td></tr></tbody></table></li></ol><ol type="1" id="d170e846-10e8-45f9-a7c7-11a62f9a960a" class="numbered-list" start="2"><li><strong>Proposições</strong><figure class="block-color-blue_background callout" style="white-space:pre-wrap;display:flex" id="f836b677-4c69-435c-90b1-aa516364f111"><div style="font-size:1.5em"><span class="icon">👤</span></div><div style="width:100%">Sociedade depende do capitalismo.</div></figure><figure class="block-color-blue_background callout" style="white-space:pre-wrap;display:flex" id="3e3001d2-5599-485f-b708-af7cef7c31fe"><div style="font-size:1.5em"><span class="icon">👤</span></div><div style="width:100%">Não há outro meio alem da livre competição de indicar aos indivíduos onde seus esforços produtivos devem ser direcionados.</div></figure><figure class="block-color-blue_background callout" style="white-space:pre-wrap;display:flex" id="776df8d8-2ab7-4e2c-b2c4-6e8bffc90429"><div style="font-size:1.5em"><span class="icon">👤</span></div><div style="width:100%">O conhecimento não vem de experiencias ou observações imediatas e sim das tradições e culturas aprendidas (Para o autor, tradição sem nenhuma relação religiosa e sim seletiva — garantiu a proliferação de quem as seguiu).</div></figure><figure class="block-color-blue_background callout" style="white-space:pre-wrap;display:flex" id="c508dc10-1555-41ec-97dd-79048b85a1d0"><div style="font-size:1.5em"><span class="icon">👤</span></div><div style="width:100%">Socialismo erra ao achar que consegue organizar a informação e os recursos melhor do que a concorrência do livre mercado.</div></figure><figure class="block-color-blue_background callout" style="white-space:pre-wrap;display:flex" id="069a38a7-e249-4124-80f8-acdf242bffb1"><div style="font-size:1.5em"><span class="icon">👤</span></div><div style="width:100%">A não escolha do socialismo não é uma questão de juízo de valor e sim uma impossibilidade logica. </div></figure></li></ol><ol type="1" id="569f024d-7153-459a-a0b3-9fe6b2ed7e0e" class="numbered-list" start="3"><li><strong>Argumentos</strong><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="3511972c-0995-41e4-8a54-e626d8f1a64a"><div style="font-size:1.5em"><span class="icon">📖</span></div><div style="width:100%">Moralidade, instituições de propriedade, liberdade e justiça nasceu de práticas/conformidades espontâneas (dom de conseguir evoluir culturalmente) que impulsionaram a sociedade para seu desenvolvimento e não a razão.</div></figure><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="6bd8e424-7b53-489f-a1f3-faa37e03d5aa"><div style="font-size:1.5em"><span class="icon">📖</span></div><div style="width:100%">Mesmo se a performance fosse semelhante, o socialismo não resolve como a distribuição poderia ser compatível com a justiça.</div></figure></li></ol><ol type="1" id="d4902d79-69cc-412c-87e7-44651b9b0327" class="numbered-list" start="4"><li><strong>Soluções</strong></li></ol></div></details><details open=""><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0"><strong>Crítica</strong></summary><div class="indented"><hr id="bd041839-5fc3-4901-a2ee-5e7125abda5f"/><ol type="1" id="f13e448f-5e38-4403-a239-6359956ac017" class="numbered-list" start="1"><li><strong>Entendimento</strong><ul id="4192df93-9f40-4bf8-a50a-d0fcd5c7ef81" class="to-do-list"><li><div class="checkbox checkbox-off"></div> <span class="to-do-children-unchecked">Sim</span><div class="indented"></div></li></ul><ul id="2046f022-ab75-4b20-941e-1c0b331c0438" class="to-do-list"><li><div class="checkbox checkbox-on"></div> <span class="to-do-children-checked">Quase Tudo</span><div class="indented"></div></li></ul><ul id="8cbe1308-6cf3-4d0b-a5bf-c4d99fcb1ce9" class="to-do-list"><li><div class="checkbox checkbox-off"></div> <span class="to-do-children-unchecked">Partes</span><div class="indented"></div></li></ul><ul id="f1019ea1-3345-48a6-bf74-38d7a4ceee2d" class="to-do-list"><li><div class="checkbox checkbox-off"></div> <span class="to-do-children-unchecked">Não</span><div class="indented"></div></li></ul></li></ol><ol type="1" id="cf802d4f-a26c-4699-b3c3-07a07292f3d6" class="numbered-list" start="2"><li><strong>Justificativas</strong><ol type="a" id="ad04e0ac-f6ec-4090-8b2c-d722864e1b61" class="numbered-list" start="1"><li><strong>Argumentos desinformados</strong></li></ol><ol type="a" id="32e73511-7c5c-435c-a151-62efe913c858" class="numbered-list" start="2"><li><strong>Argumentos mal informados</strong></li></ol><ol type="a" id="14f0f82a-4e29-4ca4-ad08-b8342702c2cb" class="numbered-list" start="3"><li><strong>Argumentos ilógicos</strong><figure class="block-color-red_background callout" style="white-space:pre-wrap;display:flex" id="1cad615f-be1e-47dc-b4b1-52ac0f20beb0"><div style="font-size:1.5em"><span class="icon">❗</span></div><div style="width:100%">Entretanto como pode uma evolução cultural se adaptar ao desconhecido? Quais adaptações deveriam ser feitas nesse caso?</div></figure><p id="dcdb7cef-09de-4b8b-8cc9-fff6176a5dfb" class=""><em><mark class="highlight-gray">Talvez nos não tenhamos clareza de pra onde estamos indo mas as adaptações caminham em direção a algum conjunto complexo de objetivos.</mark></em></p></li></ol><ol type="a" id="78b6701f-d2ee-4483-a5fb-187df5e043b8" class="numbered-list" start="4"><li><strong>Argumentos incompletos</strong></li></ol></li></ol><p id="4a74d3b8-8e5a-45d7-80c5-9b053bf1f700" class=""><div class="indented"><p id="f8559cf5-aad5-4211-9ddc-780eeb251b5a" class="">
+</p></div></p></div></details><p id="3e489ed8-e74b-43e3-859f-ea6788b6dcf1" class="">
+</p><p id="cfd8cbe0-b4cb-4f54-a1a7-c3e8c6b4beac" class="">
+</p></div></details><p id="55870f09-71e4-4ff3-97cb-e68ddfa152c1" class="">
+</p><p id="8c92d3dc-b6f3-4b9d-9b12-c152b3b264f6" class="">
+</p><p id="f485a151-3a56-44f2-aef1-4e2baa30ac1c" class="">
+</p><p id="9be9c63f-ea02-4d16-a90d-d8acc1e4ac3f" class="">
+</p><p id="8e9765d1-cc1e-4203-be9f-b15a49180a07" class="">
+</p></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>
